@@ -275,3 +275,18 @@ document.write('Es un destino urbano?:' + depende + '<br>');
 
 document.write("</br> EJERCICIO  6.1 - CAMBIAR VARIABLES CON DESTINO MÁLAGA</br>")
 
+destination = 'Málaga';
+country = 'España';
+predominantClimate = 'Soleado';
+population = '579.076';
+touristAttraction = 'Fortaleza de la Alcazaba, Catedral de Málaga, Castillo de Gibralfaro, Puerto de Málaga, Calle Larios, Plaza de la Constitución, \ Teatro Romano, Mirador del Gibralfaro, Basílica de Santa María de la Victoria, Iglesia de los Mártires.';
+coastalDestination;
+urbanDestination;
+document.write('<br>');
+document.write('Nombre del destino:' + destination + '<br>');
+document.write('Nombre país:' + country + '<br>');
+document.write('¿Cuál es el clima predominante?:' + predominantClimate + '<br>');
+document.write('¿Cuál es su población?:' + population + '<br>');
+document.write('Principales atracciones turísticas:' + touristAttraction + '<br>');
+document.write('¿Es un destino costero?:' + coastalDestination + '<br>');
+document.write('Es un destino urbano?:' + urbanDestination + '<br>');
