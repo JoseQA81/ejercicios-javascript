@@ -237,3 +237,41 @@ document.write('¿Cuál es su población?:' + population + '<br>');
 document.write('Principales atracciones turísticas:' + touristAttraction + '<br>');
 document.write('¿Es un destino costero?:' + coastalDestination + '<br>');
 document.write('Es un destino urbano?:' + urbanDestination + '<br>');
+
+document.write('</br> EJERCICIO  7 - CONSTANTES</br>');
+
+const NUMEROMESESYEAR = 12;
+document.write('The year has 12 months: ' + NUMEROMESESYEAR + ' meses');
+document.write('<br>');
+
+const NUMBERWEEKDAYS = 7;
+document.write('The week has seven days: ' + NUMBERWEEKDAYS + ' days');
+document.write('</br>');
+
+const POPULATIONMYCITY = 32329;
+document.write('Population of my city: ' + POPULATIONMYCITY + ' people');
+document.write('<br>');
+
+const SINGERAGE = 61;
+document.write('The age of my favourite singer is: ' + SINGERAGE + ' years old');
+document.write('<br>');
+
+const YEARSEASONS = 4;
+document.write('There are four seasons: ' + YEARSEASONS + ' seasons');
+document.write('<br>');
+
+const MYCITY = 'Totana';
+document.write('The name of my city is: ' + MYCITY + ', en la Región de Murcia');
+document.write('<br>');
+
+const DAYHOURS = 24;
+document.write('The day has twenty-four hours: ' + DAYHOURS + ' hours');
+document.write('<br>');
+
+const PETROLPRICE = 'Muy cara';
+document.write('The price of petrol is: ' + PETROLPRICE);
+document.write('<br>');
+
+const BOOKREAD = 18;
+document.write('I have read eighteen books: ' + BOOKREAD + ' books');
+document.write('<br>');
