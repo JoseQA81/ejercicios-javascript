@@ -248,30 +248,30 @@ const NUMBERWEEKDAYS = 7;
 document.write('The week has seven days: ' + NUMBERWEEKDAYS + ' days');
 document.write('</br>');
 
-const POPULATIONMYCITY = 32329;
-document.write('Population of my city: ' + POPULATIONMYCITY + ' people');
+let populationMyCity = 32329;
+document.write('Population of my city: ' + populationMyCity + ' people');
 document.write('<br>');
 
-const SINGERAGE = 61;
-document.write('The age of my favourite singer is: ' + SINGERAGE + ' years old');
+let singerAge = 61;
+document.write('The age of my favourite singer is: ' + singerAge + ' years old');
 document.write('<br>');
 
 const YEARSEASONS = 4;
 document.write('There are four seasons: ' + YEARSEASONS + ' seasons');
 document.write('<br>');
 
-const MYCITY = 'Totana';
-document.write('The name of my city is: ' + MYCITY + ', en la Región de Murcia');
+let myCity = 'Totana';
+document.write('The name of my city is: ' + myCity + ', en la Región de Murcia');
 document.write('<br>');
 
 const DAYHOURS = 24;
 document.write('The day has twenty-four hours: ' + DAYHOURS + ' hours');
 document.write('<br>');
 
-const PETROLPRICE = 'Muy cara';
-document.write('The price of petrol is: ' + PETROLPRICE);
+let petrolPrice = 'Muy cara';
+document.write('The price of petrol is: ' + petrolPrice);
 document.write('<br>');
 
-const BOOKREAD = 18;
-document.write('I have read eighteen books: ' + BOOKREAD + ' books');
+let bookRead = 18;
+document.write('I have read eighteen books: ' + bookRead + ' books');
 document.write('<br>');
