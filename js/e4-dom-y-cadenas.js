@@ -71,3 +71,33 @@ let nombreEstudiante = "José Andrés";
 let nuevoMensajeBienvenida = mensajeBienvenida.replace("estudiante", nombreEstudiante);
 let ejemplo10 = document.getElementById("ejemplo10");
 ejemplo10.innerText = "Antes de reemplazar " + mensajeBienvenida + " después de reemplazar " + nuevoMensajeBienvenida;
+
+//EJERCICIO 4 - CADENAS (TEXTOS)
+//Crea una variable con la frase Hola que tal, bienvenida a QA, y muestrala junto con:
+//Creo la variable
+let fraseEjercicio4 = "Hola que tal, bienvenido/a a QA";
+
+//Mostrar la frase
+let ejercicio4 = document.getElementById("ejercicio4");
+ejercicio4.innerText = "Muestro la frase: " + fraseEjercicio4;
+
+//Su longitud
+let longitudFrase = fraseEjercicio4.length;
+ejercicio4.innerText = "La frase " + fraseEjercicio4 + " tiene una longitud " + longitudFrase + " carácteres ";
+
+//La posición de la palabra QA
+let posicionQa = fraseEjercicio4.indexOf("QA");
+let elementoPosicionQa = document.getElementById("QAposicion");
+elementoPosicionQa.innerText = "La posición de la palabra QA es la número " + posicionQa;
+
+//La primera letra de la frase
+primeraLetra = fraseEjercicio4[0];
+let posicionLetra1 = document.getElementById("posicionLetra1");
+posicionLetra1.innerText = "La primera letra de la frase: " + fraseEjercicio4 + " es: " + primeraLetra;
+
+//La última letra de la frase
+ultimaLetra = fraseEjercicio4[fraseEjercicio4.length - 1];
+let ultimaLetraPosicion = document.getElementById("ultimaLetraPosicion");
+ultimaLetraPosicion.innerText = "La última letra de la frase: " + fraseEjercicio4 + " es: " + ultimaLetra;
+
+//Crea una variable nueva extrayendo la palabra "Hola" de la cadena.
