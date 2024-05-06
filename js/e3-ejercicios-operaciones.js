@@ -153,4 +153,17 @@ multiplicacionArea = baseRectangulo * alturaRectangulo;
 document.write('Para calcular el área de un paralelogramo en la base por la altura: ' + multiplicacionArea + ' centímetros' + '<br>');
 
 document.write("</br> EJERCICIO 10- Encuentra el área de un pentágono regular con lado de 6 centímetros:</br>");
+//He de decir que he tenido que recurrir a la maldita IA.
+// La fórmula para calcular el área del pentágono regular usando la apotema (a) y el perímetro (P) es sería:
+//'Área = 1/2 * a * P'
+//En un pentágono regular todos los lados son iguales, el perímetro es 5 veces la longitud de un lado (L), y la apotema se calcula:
+// a =L/2 * tan (π/5)
+//Por lo tanto, la fórmula para calcular el área del pentágono regular con solo la longitud de un lado (L) es:
+//Área = 1/2 * L/2 * tan(π/5) * 5L
+let ladoPentagono = 6; // defino la longitud del lado del pentágono
+let apotema = ladoPentagono / (2 * Math.tan (Math.PI / 5)); // aquí calculo la apotema
+let perimetro = 5 * ladoPentagono; // calculo el perímetro
+let areaPentagono = 0.5 * apotema * perimetro; // calcular el área del pentágono
+
+document.write('El área del dichoso pentágono regular es: ' + areaPentagono + 'cm²'); // imprimo el área en html.
 
