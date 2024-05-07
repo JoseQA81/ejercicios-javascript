@@ -124,9 +124,13 @@ palabraBienvenida = document.getElementById("bienvenida");
 palabraBienvenida.innerText = "Voy a mostrar la frase " + cadenaBienvenida + " en minúscula ";
 
 //Cambia la palabra bienvenida, por bienvenido
+// Definimos la nueva palabra que queremos usar
 let nuevaPalabra = "bienvenido";
+// Reemplazamos la palabra "bienvenida" por la nueva palabra en sí misma
 let mensajeNuevoBienvenida = nuevaPalabra.replace("bienvenida",nuevaPalabra);
+// Obtenemos el elemento del HTML con el ID "nuevaEntrada"
 let nuevaEntrada = document.getElementById("nuevaEntrada");
+// Actualizamos el contenido del elemento HTML con el texto y el mensaje actualizados
 nuevaEntrada.innerText = "Voy a cambiar la palabra bienvenida por su masculino: " + mensajeNuevoBienvenida;
 
 
