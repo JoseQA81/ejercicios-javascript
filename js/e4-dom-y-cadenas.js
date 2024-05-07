@@ -101,3 +101,32 @@ let ultimaLetraPosicion = document.getElementById("ultimaLetraPosicion");
 ultimaLetraPosicion.innerText = "La última letra de la frase: " + fraseEjercicio4 + " es: " + ultimaLetra;
 
 //Crea una variable nueva extrayendo la palabra "Hola" de la cadena.
+let extraerHola = fraseEjercicio4.slice(-27);
+let palabraHola = document.getElementById("extraerHola");
+palabraHola.innerText = "Extrayendo la palabra 'HOLA' " + extraerHola;
+
+//Crea una variable nueva extrayendo la palabra QA de la cadena.
+let extraerQa = fraseEjercicio4.substring(0,28);
+let palabraQa = document.getElementById("extraerQa");
+palabraQa.innerText = "Extrayendo la palabra 'QA' " + extraerQa;
+
+//Crea una variable con la palabra bienvenida.
+let bienvenida = "bienvenida";
+
+//Muestra la frase completa en mayúscula.
+let cadenaBienvenida = bienvenida.toUpperCase();
+let palabraBienvenida = document.getElementById("bienvenida");
+palabraBienvenida.innerText = "Voy a mostrar la frase " + cadenaBienvenida + " en mayúscula ";
+
+//Muestra la frase completa en minúscula
+cadenaBienvenida = bienvenida.toLocaleLowerCase();
+palabraBienvenida = document.getElementById("bienvenida");
+palabraBienvenida.innerText = "Voy a mostrar la frase " + cadenaBienvenida + " en minúscula ";
+
+//Cambia la palabra bienvenida, por bienvenido
+let nuevaPalabra = "bienvenido";
+let mensajeNuevoBienvenida = nuevaPalabra.replace("bienvenida",nuevaPalabra);
+let nuevaEntrada = document.getElementById("nuevaEntrada");
+nuevaEntrada.innerText = "Voy a cambiar la palabra bienvenida por su masculino: " + mensajeNuevoBienvenida;
+
+
