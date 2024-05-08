@@ -116,7 +116,7 @@ let baseTriangulo = 10;
 let alturaTriangulo = 8;
 multiplicacionArea = (baseTriangulo * alturaTriangulo) / 2;
 
-document.write('Para calcular el área de un triángulo en la base por la altura partido dos: ' + multiplicacionArea + ' centímetros' + '<br>');
+document.write('Para calcular el área de un triángulo es la base por la altura partido dos: ' + multiplicacionArea + ' centímetros' + '<br>');
 
 document.write("</br> EJERCICIO 5- Calcula el área de un círculo con radio de 4 centímetros:</br>");
 
@@ -161,9 +161,33 @@ document.write("</br> EJERCICIO 9- Encuentra el área de un pentágono regular c
 //Por lo tanto, la fórmula para calcular el área del pentágono regular con solo la longitud de un lado (L) es:
 //Área = 1/2 * L/2 * tan(π/5) * 5L
 let ladoPentagono = 6; // defino la longitud del lado del pentágono
-let apotema = ladoPentagono / (2 * Math.tan (Math.PI / 5)); // aquí calculo la apotema
+let apotema = ladoPentagono / (2 * Math.tan(Math.PI / 5)); // aquí calculo la apotema
 let perimetro = 5 * ladoPentagono; // calculo el perímetro
 let areaPentagono = 0.5 * apotema * perimetro; // calcular el área del pentágono
 
-document.write('El área del dichoso pentágono regular es: ' + areaPentagono + 'cm²'); // imprimo el área en html.
+document.write('El área del dichoso pentágono regular es: ' + areaPentagono + 'cm²' + '<br>'); // imprimo el área en html.
 
+
+document.write("</br> EJERCICIO 9.1- Encuentra el área de un pentágono regular con lado de 6 centímetros:</br>");
+//EJERCICIO 9.1 - Realizado por otra compañera
+//Encuentra el área de un pentágono regular con lado de 6 centímetros.
+//AREA PENTAGONO PERIMETRO POR APOTAMA ENTRE DOS. PREGUNTAMOS VALOR DE APOTEMA A CHATGPT. APOTEMA DE UN PENTAGONO DE LADO 6
+let apotemapentagono = 4.13;
+let ladopentagono = 6;
+let areapentagono;
+let perimetroPetagono = (5 * ladopentagono);
+
+areapentagono = (perimetroPetagono * apotemapentagono) / 2;
+document.write("Área del pentágono es cinco veces la longitud de su lado multiplicado por su apotema dividido entre dos. Su lado es " + ladopentagono + " cm y la apotema es " + apotemapentagono + " cm. Por lo que el área es " + areapentagono + " cm" + "</br>");
+
+
+document.write("</br> EJERCICIO 9.2- Encuentra el área de un pentágono regular con lado de 6 centímetros:</br>");
+//SOLUCION 2: CALCULAMOS LA APOTEMA CON JAVASCRIPT - REALIZADO POR REYES
+const PI2 = 3.14; //Math.PI
+apotemapentagono = ladopentagono / (2 * Math.tan(PI2/5));
+
+perimetroPetagono = (5 * ladopentagono);
+
+areapentagono = (perimetroPetagono * apotemapentagono)/2;
+
+document.write("Área del pentágono es cinco veces la longitud de su lado multiplicado por su apotema dividido entre dos. Su lado es " + ladopentagono + " cm y la apotema es " + apotemapentagono + " cm. Por lo que el área es " + areapentagono + " cm" + "</br>");
