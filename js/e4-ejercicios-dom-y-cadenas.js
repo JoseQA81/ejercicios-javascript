@@ -23,12 +23,12 @@ let fraseBienvenidaE1 = "Hola que tal, bienvenido/a a QA";
 let longitudE1 = fraseBienvenidaE1.length;
 let posicionPalabraQaE1 = fraseBienvenidaE1.indexOf("QA");
 let primeraLetraE1 = fraseBienvenidaE1[0];
-let ultimaLetraE1 = fraseBienvenidaE1[longitudE1 -1];
+let ultimaLetraE1 = fraseBienvenidaE1[longitudE1 - 1];
 let fraseMayuscula = fraseBienvenidaE1.toUpperCase();
 let fraseMinuscula = fraseBienvenidaE1.toLowerCase();
 let miNombre1 = "José Andrés";
-let welcomeMensaje = fraseBienvenidaE1.replace("que tal, bienvenida a QA" , miNombre1);
-let mensajeBienvenidaSinQueTal = fraseBienvenidaE1.replace("que tal" , miNombre1);
+let welcomeMensaje = fraseBienvenidaE1.replace("que tal, bienvenida a QA", miNombre1);
+let mensajeBienvenidaSinQueTal = fraseBienvenidaE1.replace("que tal", miNombre1);
 
 let textoParrafo = document.getElementById("e1longitud");
 textoParrafo.innerText = "La longitud de la frase " + fraseBienvenidaE1 + " es: " + longitudE1;
@@ -67,3 +67,60 @@ divEjercicios.appendChild(nuevoParrafo2);
 nuevoParrafo2 = document.createElement("p");
 nuevoParrafo2.innerText = "La frase con el nombre es " + welcomeMensaje;
 divEjercicios.appendChild(nuevoParrafo2);
+
+/*
+Crea una variable con una frase en la que te presentes y muestrala junto con:
+
+Su longitud
+
+La posición de tu nombre
+
+La primera letra de la frase.
+
+La última letra de la frase.
+
+Muestra la frase completa en mayúscula
+
+Muestra la frase completa en minúscula
+
+Muestra la frase cambiando tu nombre por otro que elijas.
+
+Crea una nueva palabra, con la misma frase quitando tu nombre.
+*/
+let frasePresentacion = "Hola, mi nombre es José Andrés y quiero ser un gran QA";
+let longitudE2 = frasePresentacion.length;
+let posicionNombre = frasePresentacion.indexOf("José Andrés");
+let primeraLetraE2 = frasePresentacion[0];
+let ultimaLetraE2 = frasePresentacion[longitudE2 - 1];
+let fraseMayusculaE2 = frasePresentacion.toUpperCase();
+let fraseMinusculaE2 = frasePresentacion.toLowerCase();
+let otroNombre = "Álex";
+let nuevaPalabra5 = "María Jesús";
+let welcomeMensaje2 = frasePresentacion.replace("José Andrés" , otroNombre);
+let welcomeMensaje3 = frasePresentacion.replace("José Andrés" , nuevaPalabra5);
+
+
+
+let e2Imprimir = document.getElementById("e2longitud");
+e2Imprimir.innerText = "La longitud de la frase de presentación es: " + frasePresentacion + " es: " + longitudE2 + " carácteres ";
+
+e2Imprimir = document.getElementById("e2posicionNombre");
+e2Imprimir.innerText = "La posición de mi nombre es: " + posicionNombre;
+
+e2Imprimir = document.getElementById("e2letraPrimera");
+e2Imprimir.innerText = "la primera letra de la frase de presentación: " + frasePresentacion + " es: " + primeraLetraE2;
+
+e2Imprimir = document.getElementById("e2letraUltima");
+e2Imprimir.innerText = "La última letra de la frase de presentación: " + frasePresentacion + " es " + ultimaLetraE2;
+
+e2Imprimir = document.getElementById("e2fraseMayuscula");
+e2Imprimir.innerText = "La frase de presentación en mayúscula: " + fraseMayusculaE2;
+
+e2Imprimir = document.getElementById("e2fraseMinuscula");
+e2Imprimir.innerText = "La frase de presentación en minúscula: " + fraseMinusculaE2;
+
+e2Imprimir = document.getElementById("e2otroNombre");
+e2Imprimir.innerText = "La frase de presentación con otro nombre es: " + welcomeMensaje2; 
+
+e2Imprimir = document.getElementById("e2palabraNueva");    
+e2Imprimir.innerText = "La frase de presentación con otro nombre es: " + welcomeMensaje3;
