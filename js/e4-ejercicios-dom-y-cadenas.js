@@ -96,8 +96,8 @@ let fraseMayusculaE2 = frasePresentacion.toUpperCase();
 let fraseMinusculaE2 = frasePresentacion.toLowerCase();
 let otroNombre = "Álex";
 let nuevaPalabra5 = "María Jesús";
-let welcomeMensaje2 = frasePresentacion.replace("José Andrés" , otroNombre);
-let welcomeMensaje3 = frasePresentacion.replace("José Andrés" , nuevaPalabra5);
+let welcomeMensaje2 = frasePresentacion.replace("José Andrés", otroNombre);
+let welcomeMensaje3 = frasePresentacion.replace("José Andrés", nuevaPalabra5);
 
 
 
@@ -120,7 +120,43 @@ e2Imprimir = document.getElementById("e2fraseMinuscula");
 e2Imprimir.innerText = "La frase de presentación en minúscula: " + fraseMinusculaE2;
 
 e2Imprimir = document.getElementById("e2otroNombre");
-e2Imprimir.innerText = "La frase de presentación con otro nombre es: " + welcomeMensaje2; 
+e2Imprimir.innerText = "La frase de presentación con otro nombre es: " + welcomeMensaje2;
 
-e2Imprimir = document.getElementById("e2palabraNueva");    
+e2Imprimir = document.getElementById("e2palabraNueva");
 e2Imprimir.innerText = "La frase de presentación con otro nombre es: " + welcomeMensaje3;
+
+//Crea una variable con tu nombre completo y muestralo por pantalla. A continuación, quita los espacios de la variable y muestralo por pantalla.
+
+let nombreConEspacios = "José Andrés Lorca Gálvez";
+let quitarEspacios = nombreConEspacios.replace(/\s/g, "");
+
+let e3Imprimir = document.getElementById("e3nombre");
+e3Imprimir.innerText = "Mi nombre sin espacios es: " + quitarEspacios + " y con espacios " + nombreConEspacios;
+
+//Crea una variable con una palabra en minuscula y muestralo por pantalla. Cambia la primera letra a mayuscula y muestrala por pantalla.
+
+let palabraMinuscula = "supercalifrajilisticoespialidoso";
+let letraPrimera = palabraMinuscula[0].toUpperCase();
+let restoDeLaPalabra = palabraMinuscula.slice(1);
+let palabraConMayuscula = letraPrimera + restoDeLaPalabra;
+
+let e4Imprimir = document.getElementById("e4minuscula");
+e4Imprimir.innerText = "La palabra es minúsculas es: " + palabraMinuscula + " y con la primera letra en mayúscula: " + palabraConMayuscula;
+
+//Esta es la versión de CHATGPT que me ha simplificado el código:
+/*charAt() es un método en JavaScript que se utiliza para obtener el carácter en una posición específica dentro de una cadena. 
+Toma un índice como argumento y devuelve el carácter en esa posición dentro de la cadena.*/
+
+let palabraConMinuscula = "queremosserlosmejoresqas";
+let palabraConUnaMayuscula = palabraConMinuscula.charAt(0).toUpperCase() + palabraConMinuscula.slice(1);
+
+let e4V2Imprimir = document.getElementById("e4V2minuscula");
+e4V2Imprimir.innerText = "La palabra en minúsculas es: " + palabraConMinuscula + ", y con la primera letra en mayúscula: " + palabraConUnaMayuscula;
+
+//Crea una cadena con el texto Hola Mundo y muestralo por pantalla. Reemplaza la palabra Hola por Adios y muestralo por pantalla.
+
+let saludoMundo = "Hola Mundo!";
+let adiosMundo = saludoMundo.replace("Hola", "Adiós");
+
+let e5Imprimir = document.getElementById("e5Mundo");
+e5Imprimir.innerText = "El texto original es: " + saludoMundo + " y el nuevo saludo es: " + adiosMundo;
