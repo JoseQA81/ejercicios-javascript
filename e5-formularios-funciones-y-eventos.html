@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript desde 0 con Ejercicios</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="p-5 bg-dark text-white text-center">
+        <h1>Bootcamp QA: Formularios, Funciones y Eventos</h1>
+        <p><a href="https://www.w3schools.com/html/html_form_input_types.asp">Formularios Input</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_select.php">Formularios Select</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_select.php">Formularios Select</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap/bootstrap_buttons.asp">Formularios Botones</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation">Formularios Validaciones</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php">Formularios Validaciones Boostrap</a></p>
+        <p><a href="https://developer.mozilla.org/es/docs/Glossary/Function">Funciones</a></p>
+    </div>
+    <br>
+    <div id="contenido" class="container mt-5">
+        <h2>EJEMPLOS</h2>
+        <p>Podeis elegir type EL TIPO, id y PLACEHOLDER: texto de informacion que aparece dentro del recuadro del input
+        </p>
+        <h3>EJEMPLO 1: Input Tipo Texto</h3>
+        <input type="text" id="e1texto" placeholder="Introduce tu texto">
+        <h3>EJEMPLO 2: Input Tipo Password</h3>
+        <input type="password" id="e2password" placeholder="Introduce tu password">
+        <h3>EJEMPLO 3: Input Tipo Radio</h3>
+        <p>Permite elegir solo uno de los tres. Deben tener el mismo name y diferente id</p>
+        <input type="radio" id="colorRojo" name="color"> Rojo
+        <input type="radio" id="colorVerde" name="color"> Verde
+        <input type="radio" id="Amarillo" name="color"> Amarillo
+        <h3>EJEMPLO 4: Input Tipo Checkbox</h3>
+        <p>Permite elegir los que quieras. No necesitan name</p>
+        <input type="checkbox" id="acepto"> Acepto las condiciones
+        <input type="checkbox" id="aceptoCookies"> Acepto las cookies
+        <h3>EJEMPLO 5: Input Tipo Fecha y tipo fecha y hora</h3>
+        <input type="date" id="e5fecha">
+        <input type="datetime-local" id="e5fechayhora">
+        <h3>EJEMPLO 6: Input Tipo Email</h3>
+        <input type="email" id="e5email" placeholder="Introduce un email">
+        <h3>EJEMPLO 7: Input Tipo Numero</h3>
+        <input type="number" id="e7numero" placeholder="Agrega un numero">
+        <h3>EJEMPLO 8: Select</h3>
+        <p>Select sirve para seleccionar un valor entre varias opciones. Tiene id, que va en el select, class
+            form-select, para que tenga un estilo bonito con boostrap y options con value que es el valor de cada
+            elemento que se selecciona</p>
+        <select id="e8Color" class="form-select">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="amarillo">Amarillo</option>
+            <option value=""></option>
+        </select>
+        <h3>EJEMPLO 8: Botones</h3>
+            <p>Botones, puedes elegir una class segun el color que quieras para el boton</p>
+            <button type="button" class="btn btn-default">Texto del Boton</button>
+            <button type="button" class="btn btn-primary">Ejemplo texto</button>
+            <button type="button" class="btn btn-success">Boton 2</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+        <h3>EJEMPLO 9: Validaciones de input texto y estilos</h3>
+        <p>Crear un div con la clase was-validated y poner dentro del div los elementos del formulario a validar</p>
+        <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar, y un texto con la class valid-feedback  y el texto de feedback valido, y otro texto con la class invalid-feedback y el texto de feedback invalido</p>
+
+        <div id="ejemplo9formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="e9texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10" class="form-control">
+                <p class="valid-feedback">El texto introducido es correcto</p>
+                <p class="invalid-feedback">El campo texto es obligatorio y debe tener entre 5 y 10 caracteres</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="number" id="e9number" placeholder="Introduce tu numero" required min="0" max="10" class="form-control">
+                <p class="valid-feedback">El numero es correcto</p>
+                <p class="invalid-feedback">El campo numero es obligatorio required, y debe tener un valor min de 0 y un max de 10</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="email" id="e9email" placeholder="Introduce tu email" required minlength="5" maxlength="10" class="form-control">
+                <p class="valid-feedback">El email introducido es correcto</p>
+                <p class="invalid-feedback">El campo email es obligatorio y debe tener entre 5 y 10 caracteres</p>
+            </div>
+
+
+            <button type="button" class="btn btn-success">Guardar Texto</button>
+        </div>
+
+
+    </div>
+
+    <div id="contenidoEjercicios" class="container mt-5">
+
+        <h2>EJERCICIOS</h2>
+
+
+
+
+    </div>
+
+    <script src="js/e5-formularios-funciones-y-eventos.js"></script>
+    <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
+</body>
+
+</html>
