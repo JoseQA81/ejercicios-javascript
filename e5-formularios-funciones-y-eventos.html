@@ -18,7 +18,8 @@
         <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_select.php">Formularios Select</a></p>
         <p><a href="https://www.w3schools.com/bootstrap/bootstrap_buttons.asp">Formularios Botones</a></p>
         <p><a href="https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation">Formularios Validaciones</a></p>
-        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php">Formularios Validaciones Boostrap</a></p>
+        <p><a href="https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php">Formularios Validaciones
+                Boostrap</a></p>
         <p><a href="https://developer.mozilla.org/es/docs/Glossary/Function">Funciones</a></p>
     </div>
     <br>
@@ -39,7 +40,6 @@
         <p>Permite elegir los que quieras. No necesitan name</p>
         <input type="checkbox" id="acepto"> Acepto las condiciones
         <input type="checkbox" id="aceptoCookies"> Acepto las cookies
-        <h3>EJEMPLO 5: Input Tipo Fecha y tipo fecha y hora</h3>
         <input type="date" id="e5fecha">
         <input type="datetime-local" id="e5fechayhora">
         <h3>EJEMPLO 6: Input Tipo Email</h3>
@@ -57,33 +57,39 @@
             <option value=""></option>
         </select>
         <h3>EJEMPLO 8: Botones</h3>
-            <p>Botones, puedes elegir una class segun el color que quieras para el boton</p>
-            <button type="button" class="btn btn-default">Texto del Boton</button>
-            <button type="button" class="btn btn-primary">Ejemplo texto</button>
-            <button type="button" class="btn btn-success">Boton 2</button>
-            <button type="button" class="btn btn-info">Info</button>
-            <button type="button" class="btn btn-warning">Warning</button>
-            <button type="button" class="btn btn-danger">Danger</button>
+        <p>Botones, puedes elegir una class segun el color que quieras para el boton</p>
+        <button type="button" class="btn btn-default">Texto del Boton</button>
+        <button type="button" class="btn btn-primary">Ejemplo texto</button>
+        <button type="button" class="btn btn-success">Boton verde</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
         <h3>EJEMPLO 9: Validaciones de input texto y estilos</h3>
         <p>Crear un div con la clase was-validated y poner dentro del div los elementos del formulario a validar</p>
-        <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar, y un texto con la class valid-feedback  y el texto de feedback valido, y otro texto con la class invalid-feedback y el texto de feedback invalido</p>
+        <p>Por cada elemento a validar, hacer un div con la clase mb-3 y dentro poner el elemento a validar, y un texto
+            con la class valid-feedback y el texto de feedback valido, y otro texto con la class invalid-feedback y el
+            texto de feedback invalido</p>
 
         <div id="ejemplo9formulario" class="was-validated">
 
             <div class="mb-3">
-                <input type="text" id="e9texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10" class="form-control">
+                <input type="text" id="e9texto" placeholder="Introduce tu texto" required minlength="5" maxlength="10"
+                    class="form-control">
                 <p class="valid-feedback">El texto introducido es correcto</p>
                 <p class="invalid-feedback">El campo texto es obligatorio y debe tener entre 5 y 10 caracteres</p>
             </div>
 
             <div class="mb-3">
-                <input type="number" id="e9number" placeholder="Introduce tu numero" required min="0" max="10" class="form-control">
+                <input type="number" id="e9number" placeholder="Introduce tu numero" required min="0" max="10"
+                    class="form-control">
                 <p class="valid-feedback">El numero es correcto</p>
-                <p class="invalid-feedback">El campo numero es obligatorio required, y debe tener un valor min de 0 y un max de 10</p>
+                <p class="invalid-feedback">El campo numero es obligatorio required, y debe tener un valor min de 0 y un
+                    max de 10</p>
             </div>
 
             <div class="mb-3">
-                <input type="email" id="e9email" placeholder="Introduce tu email" required minlength="5" maxlength="10" class="form-control">
+                <input type="email" id="e9email" placeholder="Introduce tu email" required minlength="5" maxlength="10"
+                    class="form-control">
                 <p class="valid-feedback">El email introducido es correcto</p>
                 <p class="invalid-feedback">El campo email es obligatorio y debe tener entre 5 y 10 caracteres</p>
             </div>
@@ -95,14 +101,67 @@
 
     </div>
 
+    <div id="contenidoFunciones" class="container mt-5">
+        <h1>EJEMPLOS FUNCIONES</h1>
+        <h3>Ejemplo 1: Llamar a una funcion</h3>
+        <p id="funcionesEjemplo1"></p>
+        <h3>Ejemplo 2: Llamar a una funcion desde un boton</h3>
+        <button type="button" class="btn btn-success" onclick="saludar()">Saludar</button>
+        <p id="funcionesEjemplo2"></p>
+        <h3>Ejemplo 3: Obtener informacion de un formulario y usarlo en una funcion</h3>
+        <input type="number" id="e3numero1" placeholder="Agrega un numero">
+        <input type="number" id="e3numero2" placeholder="Agrega un numero a restar">
+        <button type="button" class="btn btn-success" onclick="restar()">Restar</button>
+        <p id="funcionesEjemplo3"></p>
+        <h3>Ejemplo 4: Obtener informacion de un select y usarlo en una funcion</h4>
+            <p>Elige una ciudad:</p>
+            <select id="e4ciudades" class="form-select">
+                <option value="Malaga">Ciudad Malaga</option>
+                <option value="Madrid">Ciudad Madrid</option>
+                <option value="Barcelona">Ciudad Barcelona</option>
+                <option value=""></option>
+            </select>
+        <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostrar ubicacion</button>
+        <p id="e4solucion"></p>
+
+    </div>
+
+
+
     <div id="contenidoEjercicios" class="container mt-5">
 
         <h2>EJERCICIOS</h2>
+        <h3>EJERCICIO 1</h3>
+        <p>1- Crea un formulario para introducir nombre, ciudad y fecha de nacimiento.</p>
+        <p>1. Agrega validación con Boostrap. Todos los campos son obligatorios.
+            El nombre y la ciudad debe tener entre 3
+            y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024
+        </p>
 
+        <div id="e1formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="e1texto" placeholder="Dinos tu ciudad" required minlength="3" maxlength="30"
+                    class="form-control">
+                <div class="valid-feedback">¡Bien hecho! </div>
+                <div class="invalid-feedback">Escribe entre 3 y 30 carácteres</div>
+            </div>
+
+            <div class="mb-3">
+                <input type="date" id="e1fecha" name="Fecha de Nacimiento" required min="01-01-1900" max="31-12-2024"
+                class="form-control">  
+                <div class="valid-feedback">¡Fecha correcta! </div>
+                <div class="invalid-feedback">La fecha debe ser entre 1900 y 2024</div>
+            </div>
+            
+            <button type="button" class="btn btn-success">Guardar</button>
+        
+        </div>
 
 
 
     </div>
+
 
     <script src="js/e5-formularios-funciones-y-eventos.js"></script>
     <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
