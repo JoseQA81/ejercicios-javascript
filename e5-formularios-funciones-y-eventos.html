@@ -102,9 +102,11 @@
     </div>
 
     <div id="contenidoFunciones" class="container mt-5">
+
         <h1>EJEMPLOS FUNCIONES</h1>
         <h3>Ejemplo 1: Llamar a una funcion</h3>
         <p id="funcionesEjemplo1"></p>
+        <p id="miEjemplo"></p>
         <h3>Ejemplo 2: Llamar a una funcion desde un boton</h3>
         <button type="button" class="btn btn-success" onclick="saludar()">Saludar</button>
         <p id="funcionesEjemplo2"></p>
@@ -121,8 +123,8 @@
                 <option value="Barcelona">Ciudad Barcelona</option>
                 <option value=""></option>
             </select>
-        <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostrar ubicacion</button>
-        <p id="e4solucion"></p>
+            <button type="button" class="btn btn-success" onclick="mostrarUbicacion()">Mostrar ubicacion</button>
+            <p id="e4solucion"></p>
 
     </div>
 
@@ -141,21 +143,30 @@
         <div id="e1formulario" class="was-validated">
 
             <div class="mb-3">
-                <input type="text" id="e1texto" placeholder="Dinos tu ciudad" required minlength="3" maxlength="30"
-                    class="form-control">
+                <input type="text" id="ejercicio1Nombre" placeholder="Escribe tu nombre" required minlength="3"
+                    maxlength="30" class="form-control">
+                <div class="valid-feedback">¡Bien hecho! </div>
+                <div class="invalid-feedback">Escribe entre 3 y 30 carácteres</div>
+            </div>
+
+            <div class="mb-3">
+                <input type="text" id="ejercicio1Ciudad" placeholder="Dinos tu ciudad" required minlength="3"
+                    maxlength="30" class="form-control">
                 <div class="valid-feedback">¡Bien hecho! </div>
                 <div class="invalid-feedback">Escribe entre 3 y 30 carácteres</div>
             </div>
 
             <div class="mb-3">
                 <input type="date" id="e1fecha" name="Fecha de Nacimiento" required min="01-01-1900" max="31-12-2024"
-                class="form-control">  
+                    class="form-control">
                 <div class="valid-feedback">¡Fecha correcta! </div>
                 <div class="invalid-feedback">La fecha debe ser entre 1900 y 2024</div>
             </div>
-            
-            <button type="button" class="btn btn-success">Guardar</button>
-        
+
+            <p>1- Agrega un boton que al hacer click llame a una función que muestre un mensaje de bienvenida con los datos introducidos.</p>
+            <button type="button" class="btn btn-success" onclick="mostrarMensaje()">¡Hola, bienvenido/a!</button>
+            <p id="e1bienvenida"></p>
+
         </div>
 
 

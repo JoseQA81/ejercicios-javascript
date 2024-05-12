@@ -23,6 +23,8 @@ function suma (num1,num2){
 //Llama a la funcion suma, con los valores
 suma(2,2);
 suma(3,3);
+suma(5,5);
+
 
 //Funcion con argumentos ejemplo 2
 //declaramos la funcion agregar nuevo parrafo
@@ -32,13 +34,13 @@ function agregarNuevoParrafo (mensaje) {
     parrafoNuevo.innerText = mensaje;
     divFunciones.appendChild(parrafoNuevo);
 }
-//llamamos a la funcion con variables
+//llamamos a la funcion con variables o directamente el valor (línea 41, 42)
 let mensaje = "Hola que tal";
 agregarNuevoParrafo(mensaje);
 let nombre = "Reyes";
-agregarNuevoParrafo("Hola que tal" + nombre);
+agregarNuevoParrafo("Hola que tal " + nombre);
 agregarNuevoParrafo("Adios me voy");
-
+agregarNuevoParrafo("Dios ayúdame a entender bien JavaScript, a ser un excelente programador a nivel intermedio (de momento) y el mejor QA!!");
 
 //-------------PARTE PRINCIPAL -------------------------//
 //Llamar a una funcion desde un boton de html con el evento onclick
@@ -63,7 +65,7 @@ function restar(){
     let num2 = document.getElementById("e3numero2").value;
     let resta = num1 - num2;
     let mensaje = "La resta de los numeros " + num1 + " y " + num2 + " es igual a " + resta;
-    //Usamos la funcion de imprimir que hemos declarado antse
+    //Usamos la funcion de imprimir que hemos declarado antes
     imprimir(mensaje,"funcionesEjemplo3");
 }
 
@@ -73,4 +75,21 @@ function mostrarUbicacion () {
     let ciudadSeleccionada = document.getElementById("e4ciudades").value;
     let mensaje = "Te encuentras en la ciudad " + ciudadSeleccionada;
     imprimir(mensaje,"e4solucion");
+}
+
+//EJERCICIOS
+//5. FORMULARIOS, FUNCIONES Y EVENTOS.
+
+//1. Crea un formulario para introducir nombre, ciudad y fecha de nacimiento. 
+//1- Agrega validación con Boostrap. Todos los campos son obligatorios. El nombre y la ciudad debe tener entre 3 y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024. 
+//2- Agrega un boton que al hacer click llame a una función que muestre un mensaje de bienvenida con los datos introducidos.
+
+function mostrarMensaje() {
+    let nombre = document.getElementById("ejercicio1Nombre").value;
+    let ciudad = document.getElementById("ejercicio1Ciudad").value;
+    let fechaNacimiento = document.getElementById("e1fecha").value;
+
+    let mensaje = "¡Bienvenido/a, " + nombre + "! Eres de " + ciudad + " y naciste el " + fechaNacimiento + ".";
+    document.getElementById("e1bienvenida").innerText = mensaje;
+     //Con "alert(mensaje);" en vez de debajo del botón, el mensaje se muestra en un cuadro de diálogo.
 }
