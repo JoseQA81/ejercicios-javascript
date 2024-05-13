@@ -170,7 +170,7 @@
         </div>
 
         <h3>EJERCICIO 2</h3>
-        <p>2- Crea un formulario para introducir dos números.</p>
+        <p>Crea un formulario para introducir dos números.</p>
         <p>1. Agrega validación con Boostrap. Todos los campos son obligatorios. Solo admite numeros de cualquier tipo.
         </p>
 
@@ -181,9 +181,9 @@
                 <p class="valid-feedback">Campo numérico es correcto</p>
                 <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres obligatorios</p>
             </div>
-            // la expresión regular \d+ significa que el campo debe contener uno o más dígitos numéricos.
+            <!-- la expresión regular \d+ significa que el campo debe contener uno o más dígitos numéricos.
             Si el valor ingresado por el usuario no coincide con este patrón, se mostrará un mensaje de error de
-            validación.
+            validación. -->
             <div class="mb-3">
                 <input type="text" id="numero2" placeholder="Segundo número" required pattern="\d+"
                     class="form-control">
@@ -198,7 +198,7 @@
             <p id="e2resultadOperaciones"></p>
 
             <h3>EJERCICIO 3</h3>
-            <p>3- Crea un formulario para convertir monedas. El usuario debe introducir una catidad en euros.</p>
+            <p>Crea un formulario para convertir monedas. El usuario debe introducir una catidad en euros.</p>
             <p>1. Agrega validación con boostrap, el campo es obligatorio, debe ser un número positivo.</p>
 
             <div id="e3formularioConversion" class="was-validated">
@@ -216,16 +216,72 @@
                 <button type="button" class="btn btn-success" onclick="convertirMonedas()">Pulsa para convertir</button>
                 <p id="e3conversionResultado"></p>
 
-
             </div>
+
+        </div>
+        <h3>EJERCICIO 4</h3>
+        <p>Crea un formulario para calcular precio total de un producto.</p>
+        <p>1. El usuario debe introducir el nombre del producto, el precio y la cantidad. Agrega validación
+            Boostrap. Todos los campos son obligatorios. El nombre debe tener entre 3 y 20 caracteres. El precio no
+            puede ser negativo. La cantidad no puede ser negativa.</p>
+
+        <div id="precioProducto" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="e4Producto" placeholder="Nombre del producto" required minlength="3"
+                    maxlength="20" class="form-control">
+                <div class="valid-feedback">¡Correcto!</div>
+                <div class="invalid-feedback">Por favor, introduce un nombre válido (entre 3 y 20 caracteres).</div>
+            </div>
+            <!-- step="0.01" indica que el campo de entrada de número aceptará incrementos o decrementos de 0.01. Esto
+significa que los usuarios pueden aumentar o disminuir el valor del campo en incrementos de 0.01 -->
+            <div class="mb-3">
+                <input type="number" id="e4ProductoPrecio" placeholder="Precio del producto" required min="0"
+                    step="0.01" class="form-control">
+                <div class="valid-feedback">¡Precio correcto!</div>
+                <div class="invalid-feedback">Por favor, introduce un precio válido (no puede ser negativo).</div>
+            </div>
+
+            <div class="mb-3">
+                <input type="number" id="e4ProductoCantidad" placeholder="Cantidad del producto" required min="0"
+                    class="form-control">
+                <div class="valid-feedback">¡Cantidad correcta!</div>
+                <div class="invalid-feedback">Por favor, introduce una cantidad válida (no puede ser negativa).</div>
+            </div>
+
+            <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre del
+                producto, su cantidad, su precio y el precio total.</p>
+
+            <button type="button" class="btn btn-success" onclick="calculaPrecioTotal()">Calcula el precio
+                total</button>
+            <p id="e4calculaPrecioBoton"></p>
+
+
+
+
+
+
 
 
 
         </div>
 
 
-        <script src="js/e5-formularios-funciones-y-eventos.js"></script>
-        <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <script src="js/e5-formularios-funciones-y-eventos.js"></script>
+    <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
 </body>
 
 </html>
