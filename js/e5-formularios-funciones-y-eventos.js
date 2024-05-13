@@ -77,19 +77,4 @@ function mostrarUbicacion () {
     imprimir(mensaje,"e4solucion");
 }
 
-//EJERCICIOS
-//5. FORMULARIOS, FUNCIONES Y EVENTOS.
 
-//1. Crea un formulario para introducir nombre, ciudad y fecha de nacimiento. 
-//1- Agrega validación con Boostrap. Todos los campos son obligatorios. El nombre y la ciudad debe tener entre 3 y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024. 
-//2- Agrega un boton que al hacer click llame a una función que muestre un mensaje de bienvenida con los datos introducidos.
-
-function mostrarMensaje() {
-    let nombre = document.getElementById("ejercicio1Nombre").value;
-    let ciudad = document.getElementById("ejercicio1Ciudad").value;
-    let fechaNacimiento = document.getElementById("e1fecha").value;
-
-    let mensaje = "¡Bienvenido/a, " + nombre + "! Eres de " + ciudad + " y naciste el " + fechaNacimiento + ".";
-    document.getElementById("e1bienvenida").innerText = mensaje;
-     //Con "alert(mensaje);" en vez de debajo del botón, el mensaje se muestra en un cuadro de diálogo.
-}

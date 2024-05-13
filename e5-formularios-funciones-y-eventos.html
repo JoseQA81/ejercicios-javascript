@@ -82,7 +82,7 @@
             <div class="mb-3">
                 <input type="number" id="e9number" placeholder="Introduce tu numero" required min="0" max="10"
                     class="form-control">
-                <p class="valid-feedback">El numero es correcto</p>
+                <p class="valid-feedback">El número es correcto</p>
                 <p class="invalid-feedback">El campo numero es obligatorio required, y debe tener un valor min de 0 y un
                     max de 10</p>
             </div>
@@ -133,9 +133,8 @@
     <div id="contenidoEjercicios" class="container mt-5">
 
         <h2>EJERCICIOS</h2>
-        <h3>EJERCICIO 1</h3>
-        <p>1- Crea un formulario para introducir nombre, ciudad y fecha de nacimiento.</p>
-        <p>1. Agrega validación con Boostrap. Todos los campos son obligatorios.
+        <p>1. Crea un formulario para introducir nombre, ciudad y fecha de nacimiento.</p>
+        <p>1- Agrega validación con Boostrap. Todos los campos son obligatorios.
             El nombre y la ciudad debe tener entre 3
             y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024
         </p>
@@ -163,19 +162,70 @@
                 <div class="invalid-feedback">La fecha debe ser entre 1900 y 2024</div>
             </div>
 
-            <p>1- Agrega un boton que al hacer click llame a una función que muestre un mensaje de bienvenida con los datos introducidos.</p>
+            <p>1- Agrega un boton que al hacer click llame a una función que muestre un mensaje de bienvenida con los
+                datos introducidos.</p>
             <button type="button" class="btn btn-success" onclick="mostrarMensaje()">¡Hola, bienvenido/a!</button>
             <p id="e1bienvenida"></p>
 
         </div>
 
+        <h3>EJERCICIO 2</h3>
+        <p>2- Crea un formulario para introducir dos números.</p>
+        <p>1. Agrega validación con Boostrap. Todos los campos son obligatorios. Solo admite numeros de cualquier tipo.
+        </p>
+
+        <div id="e2formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="numero1" placeholder="Primer número" required pattern="\d+" class="form-control">
+                <p class="valid-feedback">Campo numérico es correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres obligatorios</p>
+            </div>
+            // la expresión regular \d+ significa que el campo debe contener uno o más dígitos numéricos.
+            Si el valor ingresado por el usuario no coincide con este patrón, se mostrará un mensaje de error de
+            validación.
+            <div class="mb-3">
+                <input type="text" id="numero2" placeholder="Segundo número" required pattern="\d+"
+                    class="form-control">
+                <p class="valid-feedback">Campo numérico es correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres obligatorios</p>
+            </div>
+
+            <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el resultado de la
+                suma, la resta, la multiplicación y la división de esos dos números.
+            </p>
+            <button type="button" onclick="calcularOperaciones()" class="btn btn-primary">Calcular</button>
+            <p id="e2resultadOperaciones"></p>
+
+            <h3>EJERCICIO 3</h3>
+            <p>3- Crea un formulario para convertir monedas. El usuario debe introducir una catidad en euros.</p>
+            <p>1. Agrega validación con boostrap, el campo es obligatorio, debe ser un número positivo.</p>
+
+            <div id="e3formularioConversion" class="was-validated">
+
+                <div class="mb-3">
+                    <input type="number" id="ejercicio3" placeholder="Cantidad Euros" required min="0" step="0.01"
+                        class="form-control">
+                    <p class="valid-feedback">Cantidad válida</p>
+                    <p class="invalid-feedback">Por favor, ingrese una cantidad válida en €</p>
+                </div>
+
+                <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la cantidad en
+                    dólares y en libras.</p>
+
+                <button type="button" class="btn btn-success" onclick="convertirMonedas()">Pulsa para convertir</button>
+                <p id="e3conversionResultado"></p>
 
 
-    </div>
+            </div>
 
 
-    <script src="js/e5-formularios-funciones-y-eventos.js"></script>
-    <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
+
+        </div>
+
+
+        <script src="js/e5-formularios-funciones-y-eventos.js"></script>
+        <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
 </body>
 
 </html>
