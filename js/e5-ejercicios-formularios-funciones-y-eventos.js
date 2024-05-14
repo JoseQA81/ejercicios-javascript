@@ -43,6 +43,7 @@ function calcularOperaciones() {
 
 //3. Crea un formulario para convertir monedas. El usuario debe introducir una catidad en euros. 
 //1. Agrega validación con boostrap, el campo es obligatorio, debe ser un número positivo.
+//2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la cantidad en dólares y en libras.
 
 function convertirMonedas() {
     //Obtener la cantidad en €
