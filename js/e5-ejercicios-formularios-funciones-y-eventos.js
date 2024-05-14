@@ -51,15 +51,20 @@ function convertirMonedas() {
     //Verificar si la cantidad en un número positivo - //isNaN: La función isNaN intenta convertir el valor pasado como argumento a un número.
     // Si la conversión tiene éxito, devuelve false. Si la conversión falla y el valor no se puede interpretar como un número válido, devuelve true.
     if (isNaN(cantidadEuros) || cantidadEuros < 0) {
-    //Mostrar mensaje de error si la cantidad no es válida
-mensajeConversion ("Ingresa una cantidad válida en €.", " ", " ");
+        //Mostrar mensaje de error si la cantidad no es válida
+        mensajeConversion("Ingresa una cantidad válida en €.", " ", " ");
     } else {
-    //Conversión de dólares a libras
-    let cantidadDolares = cantidadEuros *  1.12; // 1€ equivale a 1.12 USD
-    let cantidadLibras = cantidadEuros * 0.85; // 1€ equivale a 0.85 GBP 
-    //Resultado de la conversión
-    mensajeConversion("", cantidadDolares.toFixed(2) + " dólares ", cantidadLibras.toFixed(2) + " libras ");
-    //Las comillas vacías "" indican que no hay mensaje de error en esta llamada específica a la función mensajeConversion().
+        //Conversión de dólares a libras
+        let cantidadDolares = cantidadEuros * 1.12; // 1€ equivale a 1.12 USD
+        let cantidadLibras = cantidadEuros * 0.85; // 1€ equivale a 0.85 GBP 
+        //Resultado de la conversión
+        mensajeConversion("", cantidadDolares.toFixed(2) + " dólares ", cantidadLibras.toFixed(2) + " libras ");
+        //Las comillas vacías "" indican que no hay mensaje de error en esta llamada específica a la función mensajeConversion().
+        //.toFixed(2):Es un método de JavaScript que convierte un número en una cadena, manteniendo un número específico de decimales.
+        //En este caso, convierte precioProducto a una cadena con 2 decimales.
+        //Ejemplo:
+        //Si precioProducto es 1.234, precioProducto.toFixed(2) devuelve "1.23".
+        //Esto asegura que el precio se muestre con dos decimales, que es un formato común para precios.
     }
 }
 
@@ -77,3 +82,49 @@ function mensajeConversion(error, dolares, libras) {
 //si hay un mensaje de error. Si error tiene contenido (no es una cadena vacía), el bloque de código dentro del if se ejecutará, lo que significa
 //que hay un mensaje de error y se manejará en consecuencia. Si error está vacío (es una cadena vacía), el bloque if no se ejecutará,
 //lo que indica que no hay error y el flujo del programa continuará según lo previsto.
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Ejercicio 4 - Crea un formulario para calcular precio total de un producto.
+//1. El usuario debe introducir el nombre del producto, el precio y la cantidad. Agrega validación Boostrap. Todos los campos son obligatorios. 
+//El nombre debe tener entre 3 y 20 caracteres. El precio no puede ser negativo. La cantidad no puede ser negativa.
+
+function calculaPrecioTotal() {
+    let nombreProducto = document.getElementById("e4Producto").value;
+    let precioProducto = parseFloat(document.getElementById("e4ProductoPrecio").value);
+    let cantidadProducto = parseInt(document.getElementById("e4ProductoCantidad").value);
+
+    //Validar que los valores sean correctos
+    if (nombreProducto.length >= 3 && nombreProducto.length <= 20 && !isNaN(precioProducto) && precioProducto >= 0 && !isNaN(cantidadProducto) && cantidadProducto >= 0) {
+        //Calcular precio total
+        let precioTotal = precioProducto * cantidadProducto;
+        //Mostrar resultado
+        document.getElementById("e4calculaPrecioBoton").innerText = `Producto: ${nombreProducto}\nCantidad: ${cantidadProducto}\nPrecio unidad: ${precioProducto.toFixed(2)} €\nPrecio Total: ${precioTotal.toFixed(2)} €`;
+    } else {
+        // Mostrar un mensaje de error si los valores no son válidos
+        document.getElementById("e4calculaPrecioBoton").innerText = "Por favor, introduce valores válidos";
+    }
+}
+//Template Literals y ${} en JavaScript
+//Los template literals son una forma de crear cadenas de texto en JavaScript que permite incluir variables y expresiones dentro de las cadenas
+//de manera más sencilla y legible. Se delimitan con backticks (`) en lugar de comillas simples (') o dobles (").
+//Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena.
+//Esto se llama interpolación de variables
+
+/*Uso de ${}
+Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena. 
+Esto se llama interpolación de variables.
+
+Ejemplo Básico
+Supongamos que tenemos dos variables:
+
+let nombre = "Juan";
+let edad = 30;
+
+Con template literals y ${}, podemos crear una cadena que incluya estos valores de manera sencilla:
+
+let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
+
+Sin template literals, tendrías que hacer algo como esto:
+
+let mensaje = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años."; */
