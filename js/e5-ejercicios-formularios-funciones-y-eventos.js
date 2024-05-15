@@ -30,7 +30,7 @@ function calcularOperaciones() {
 
     //Para cuadro diálogo alert("Suma: " + resultadoSuma + "\nResta: " + resultadoResta + "\nMultiplicación: " + resultadoMultiplicar + "\nresultadoDividir: " + resultadoDividir);
     let mensaje = "La suma: " + resultadoSumar + "\nResta: " + resultadoRestar + "\nMultiplicación: " + resultadoMultiplicar + "\nresultadoDividir: " + resultadoDividir;
-    document.getElementById("e2resultadOperaciones").innerText = mensaje;
+    imprimir(mensaje, "e2resultadOperaciones"); //He impreso con la función "imprimir" previamente definida
 }
 //"\nResta: ": La secuencia de escape \n representa un salto de línea en el mensaje. 
 //Por lo tanto, esto coloca "Resta: " en una nueva línea en el mensaje emergente.
@@ -45,7 +45,7 @@ function calcularOperaciones() {
 //1. Agrega validación con boostrap, el campo es obligatorio, debe ser un número positivo.
 //2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la cantidad en dólares y en libras.
 
-function convertirMonedas() {
+/*function convertirMonedas() {
     //Obtener la cantidad en €
     let cantidadEuros = parseFloat(document.getElementById("ejercicio3").value);
 
@@ -82,7 +82,24 @@ function mensajeConversion(error, dolares, libras) {
 //La condición error !== "" se evalúa como verdadera si la variable error no es una cadena vacía. En otras palabras, este condicional verifica
 //si hay un mensaje de error. Si error tiene contenido (no es una cadena vacía), el bloque de código dentro del if se ejecutará, lo que significa
 //que hay un mensaje de error y se manejará en consecuencia. Si error está vacío (es una cadena vacía), el bloque if no se ejecutará,
-//lo que indica que no hay error y el flujo del programa continuará según lo previsto.
+//lo que indica que no hay error y el flujo del programa continuará según lo previsto. */
+
+function convertirMonedas() {
+    let num1euros = parseFloat(document.getElementById("ejercicio3").value);
+    let cantidadDolares = 1.12;
+    let cantidadLibras = 0.85;
+    let dolarestotales = num1euros * cantidadDolares;
+    let librastotales = num1euros * cantidadLibras;
+
+    let mensaje = "La cantidad de euros " + num1euros + " equivale a  " + librastotales.toFixed(2) + " libras y a  " + dolarestotales.toFixed(2) + " dolares";
+
+    imprimir(mensaje, "e3conversionResultado");
+}
+
+//.toFixed(2):Es un método de JavaScript que convierte un número en una cadena, manteniendo un número específico de decimales.
+        //En este caso, convierte precioProducto a una cadena con 2 decimales.
+        //Ejemplo:
+        //Si precioProducto es 1.234, precioProducto.toFixed(2) devuelve "1.23".
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
