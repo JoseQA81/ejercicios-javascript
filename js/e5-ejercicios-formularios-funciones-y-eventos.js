@@ -97,9 +97,9 @@ function convertirMonedas() {
 }
 
 //.toFixed(2):Es un método de JavaScript que convierte un número en una cadena, manteniendo un número específico de decimales.
-        //En este caso, convierte precioProducto a una cadena con 2 decimales.
-        //Ejemplo:
-        //Si precioProducto es 1.234, precioProducto.toFixed(2) devuelve "1.23".
+//En este caso, convierte precioProducto a una cadena con 2 decimales.
+//Ejemplo:
+//Si precioProducto es 1.234, precioProducto.toFixed(2) devuelve "1.23".
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -123,26 +123,41 @@ function calculaPrecioTotal() {
         document.getElementById("e4calculaPrecioBoton").innerText = "Por favor, introduce valores válidos";
     }
 }
-//Template Literals y ${} en JavaScript
-//Los template literals son una forma de crear cadenas de texto en JavaScript que permite incluir variables y expresiones dentro de las cadenas
-//de manera más sencilla y legible. Se delimitan con backticks (`) en lugar de comillas simples (') o dobles (").
-//Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena.
-//Esto se llama interpolación de variables
+/*function precioTotal() {
+    let nombreProducto = document.getElementById("nombreProducto").value;
+    let precioProducto = document.getElementById("precioProducto").value;
+    let cantidadProducto = document.getElementById("cantidadProducto").value;
 
-/*Uso de ${}
-Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena. 
-Esto se llama interpolación de variables.
+    let resultado = cantidadProducto * precioProducto;
+    let mensaje = "El producto" + nombreProducto + " tiene un precio total de " + resultado; */ // EJEMPLO PARA VOLVER A HACER SIN CONDICIONES
 
-Ejemplo Básico
-Supongamos que tenemos dos variables:
+    //Template Literals y ${} en JavaScript
+    //Los template literals son una forma de crear cadenas de texto en JavaScript que permite incluir variables y expresiones dentro de las cadenas
+    //de manera más sencilla y legible. Se delimitan con backticks (`) en lugar de comillas simples (') o dobles (").
+    //Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena.
+    //Esto se llama interpolación de variables
 
-let nombre = "Juan";
-let edad = 30;
+    /*Uso de ${}
+    Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena. 
+    Esto se llama interpolación de variables.
+    
+    Ejemplo Básico
+    Supongamos que tenemos dos variables:
+    
+    let nombre = "Juan";
+    let edad = 30;
+    
+    Con template literals y ${}, podemos crear una cadena que incluya estos valores de manera sencilla:
+    
+    let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
+    
+    Sin template literals, tendrías que hacer algo como esto:
+    
+    let mensaje = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años."; */
 
-Con template literals y ${}, podemos crear una cadena que incluya estos valores de manera sencilla:
+    //EJERCICIO 5
+    function seleccionaCamiseta() {
+        const color = camisetaColor = document.getElementById("colorCamiseta").value;
+        const talla = camisetaTalla = document.getElementById("tallaCamiseta").value;
+    }
 
-let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
-
-Sin template literals, tendrías que hacer algo como esto:
-
-let mensaje = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años."; */
