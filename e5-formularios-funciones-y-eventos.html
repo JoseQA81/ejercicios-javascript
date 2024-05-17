@@ -139,7 +139,7 @@
             y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024
         </p>
 
-        <div id="e1formulario" class="was-validated">
+        <form id="e1formulario" class="was-validated">
 
             <div class="mb-3">
                 <input type="text" id="ejercicio1Nombre" placeholder="Escribe tu nombre" required minlength="3"
@@ -166,15 +166,17 @@
                 datos introducidos.</p>
             <button type="button" class="btn btn-success" onclick="mostrarMensaje()">¡Hola, bienvenido/a!</button>
 
-        </div>
+        </form>
         <p id="e1bienvenida"></p> <!--Poner el ID del botón fuera del <div> -->
 
         <h3>EJERCICIO 2</h3>
         <p>Crea un formulario para introducir dos números.</p>
         <p>1. Agrega validación con Boostrap. Todos los campos son obligatorios. Solo admite numeros de cualquier tipo.
         </p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el resultado de la
+            suma, la resta, la multiplicación y la división de esos dos números.</p>
 
-        <div id="e2formulario" class="was-validated">
+        <form id="e2formulario" class="was-validated">
 
             <div class="mb-3">
                 <input type="number" id="numero1" placeholder="Primer número" required class="form-control">
@@ -190,12 +192,10 @@
                 <p class="invalid-feedback">El campo número es obligatorio y debe tener dos carácteres obligatorios</p>
             </div>
 
-            <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el resultado de la
-                suma, la resta, la multiplicación y la división de esos dos números.
-            </p>
+
             <button type="button" onclick="calcularOperaciones()" class="btn btn-primary">Calcular</button>
 
-        </div>
+        </form>
         <p id="e2resultadOperaciones"></p>
 
 
@@ -203,7 +203,7 @@
         <p>Crea un formulario para convertir monedas. El usuario debe introducir una catidad en euros.</p>
         <p>1. Agrega validación con boostrap, el campo es obligatorio, debe ser un número positivo.</p>
 
-        <div id="e3formularioConversion" class="was-validated">
+        <form id="e3formularioConversion" class="was-validated">
 
             <div class="mb-3">
                 <input type="number" id="ejercicio3" placeholder="Cantidad Euros" required min="0" step="0.01"
@@ -217,7 +217,7 @@
 
             <button type="button" class="btn btn-success" onclick="convertirMonedas()">Pulsa para convertir</button>
 
-        </div>
+        </form>
         <p id="e3conversionResultado"></p>
 
         <h3>EJERCICIO 4</h3>
@@ -225,39 +225,40 @@
         <p>1. El usuario debe introducir el nombre del producto, el precio y la cantidad. Agrega validación
             Boostrap. Todos los campos son obligatorios. El nombre debe tener entre 3 y 20 caracteres. El precio no
             puede ser negativo. La cantidad no puede ser negativa.</p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre del
+            producto, su cantidad, su precio y el precio total.</p>
 
-        <div id="precioProducto" class="was-validated">
+        <form id="precioProducto" class="was-validated">
 
             <div class="mb-3">
-                <input type="text" id="e4Producto" placeholder="Nombre del producto" required minlength="3"
-                    maxlength="20" class="form-control">
+                <input type="text" id="e4Producto" placeholder="Nombre del producto" style="max-width: 250px;" required
+                    minlength="3" maxlength="20" class="form-control">
                 <p class="valid-feedback">¡Correcto!</p>
                 <p class="invalid-feedback">Por favor, introduce un nombre válido (entre 3 y 20 caracteres).</p>
             </div>
             <!-- step="0.01" indica que el campo de entrada de número aceptará incrementos o decrementos de 0.01. Esto
 significa que los usuarios pueden aumentar o disminuir el valor del campo en incrementos de 0.01 -->
             <div class="mb-3">
-                <input type="number" id="e4ProductoPrecio" placeholder="Precio del producto" required min="0"
-                    step="0.01" class="form-control">
+                <input type="number" id="e4ProductoPrecio" placeholder="Precio del producto" style="max-width: 250px;"
+                    required min="0" step="0.01" class="form-control">
                 <p class="valid-feedback">¡Precio correcto!</p>
                 <p class="invalid-feedback">Por favor, introduce un precio válido (no puede ser negativo).</p>
             </div>
 
             <div class="mb-3">
-                <input type="number" id="e4ProductoCantidad" placeholder="Cantidad del producto" required min="0"
-                    class="form-control">
+                <input type="number" id="e4ProductoCantidad" placeholder="Cantidad del producto"
+                    style="max-width: 250px;" required min="0" class="form-control">
                 <p class="valid-feedback">¡Cantidad correcta!</p>
                 <p class="invalid-feedback">Por favor, introduce una cantidad válida (no puede ser negativa).</p>
             </div>
 
-            <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre del
-                producto, su cantidad, su precio y el precio total.</p>
-
-            <button type="button" class="btn btn-success" onclick="calculaPrecioTotal()">Calcula el precio
+            <button type="button" class="btn btn-success" onclick="calcularPrecioTotal()">Calcula el precio
                 total</button>
 
-        </div>
+        </form>
         <p id="e4calculaPrecioBoton"></p>
+
+
         <h3>EJERCICIO 5</h3>
         <p>Crea un formulario para elegir la talla y el color de una camiseta.</p>
         <p>1. El usuario debe elegir de un select el color entre 5 colores posibles, y la talla de la XS a la XXL.
@@ -265,10 +266,10 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
         <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la talla y el color de
             la camiseta elegidos.</p>
 
-        <form id="precioProducto" class="was-validated">
+        <form id="precioProducto2" class="was-validated">
 
             <div class="mb-3">
-                <select id="colorCamiseta" class="form-select" required>
+                <select id="colorCamiseta" class="form-select" style="max-width: 250px;" required>
                     <option value="">Selecciona un color</option>
                     <option value="verde">Verde</option>
                     <option value="azul">Azul</option>
@@ -281,7 +282,7 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
             </div>
 
             <div class="mb-3">
-                <select id="tallaCamiseta" class="form-select" required>
+                <select id="tallaCamiseta" class="form-select" style="max-width: 250px;" required>
                     <option value="">Selecciona una talla</option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
@@ -294,7 +295,25 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
             </div>
             <button type="button" class="btn btn-success" onclick="seleccionaCamiseta()">Selecciona camiseta</button>
         </form>
-        <p id="e5camiseta"></p>
+        <p id="e5resultadoFormularios"></p>
+
+        <h3>Ejercicio 6: Crea un formulario para introducir la edad del usuario</h3>
+        <p>1. La edad debe ser un numero positivo y es obligatorio. Agrega validación Boostrap.</p>
+        <p>1. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la edad en dias, la edad
+            en minutos y la edad en segundos.</p>
+
+        <form id="e6Formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="number" id="e6Edad" placeholder="Introduce tu edad" required min="1" class="form-control">
+                <p class="valid-feedback">Edad válida</p>
+                <p class="invalid-feedback">Por favor, la edad es obligatoria y debe ser positiva</p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="calcularEdad()">Edad</button>
+
+        </form>
+        <p id="e6resultado"></p>
     </div>
 
 

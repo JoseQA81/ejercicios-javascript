@@ -106,8 +106,9 @@ function convertirMonedas() {
 //Ejercicio 4 - Crea un formulario para calcular precio total de un producto.
 //1. El usuario debe introducir el nombre del producto, el precio y la cantidad. Agrega validación Boostrap. Todos los campos son obligatorios. 
 //El nombre debe tener entre 3 y 20 caracteres. El precio no puede ser negativo. La cantidad no puede ser negativa.
+//EJERCICIO CON CONDICIONALES (TODAVÍA NO LAS HABÍA EXPLICADO):
 
-function calculaPrecioTotal() {
+/*function calculaPrecioTotal() {
     let nombreProducto = document.getElementById("e4Producto").value;
     let precioProducto = parseFloat(document.getElementById("e4ProductoPrecio").value);
     let cantidadProducto = parseInt(document.getElementById("e4ProductoCantidad").value);
@@ -121,43 +122,72 @@ function calculaPrecioTotal() {
     } else {
         // Mostrar un mensaje de error si los valores no son válidos
         document.getElementById("e4calculaPrecioBoton").innerText = "Por favor, introduce valores válidos";
-    }
+    } 
+} */
+
+//Template Literals y ${} en JavaScript
+//Los template literals son una forma de crear cadenas de texto en JavaScript que permite incluir variables y expresiones dentro de las cadenas
+//de manera más sencilla y legible. Se delimitan con backticks (`) en lugar de comillas simples (') o dobles (").
+//Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena.
+//Esto se llama interpolación de variables
+
+/*Uso de ${}
+Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena. 
+Esto se llama interpolación de variables.
+ 
+Ejemplo Básico
+Supongamos que tenemos dos variables:
+ 
+let nombre = "Juan";
+let edad = 30;
+ 
+Con template literals y ${}, podemos crear una cadena que incluya estos valores de manera sencilla:
+ 
+let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
+ 
+Sin template literals, tendrías que hacer algo como esto:
+ 
+let mensaje = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años."; */
+
+// EJEMPLO SIN CONDICIONES Ejercicio 4
+function calcularPrecioTotal() {
+    let nombreProducto = document.getElementById("e4Producto").value;
+    let productoPrecio = parseFloat(document.getElementById("e4ProductoPrecio").value);
+    let cantidadProducto = parseInt(document.getElementById("e4ProductoCantidad").value);
+
+    let resultado = productoPrecio * cantidadProducto;
+    let mensaje = "El producto " + nombreProducto + " cuesta: " + productoPrecio + "\n" + " Cantidad " + cantidadProducto + "\n" + " Tiene un precio total de: " + resultado;
+
+    imprimir(mensaje, "e4calculaPrecioBoton");
 }
-/*function precioTotal() {
-    let nombreProducto = document.getElementById("nombreProducto").value;
-    let precioProducto = document.getElementById("precioProducto").value;
-    let cantidadProducto = document.getElementById("cantidadProducto").value;
 
-    let resultado = cantidadProducto * precioProducto;
-    let mensaje = "El producto" + nombreProducto + " tiene un precio total de " + resultado; */ // EJEMPLO PARA VOLVER A HACER SIN CONDICIONES
+//EJERCICIO 5
+function seleccionaCamiseta() {
+    let colorCamiseta = camisetaColor = document.getElementById("colorCamiseta").value;
+    let tallaCamiseta = camisetaTalla = document.getElementById("tallaCamiseta").value;
 
-    //Template Literals y ${} en JavaScript
-    //Los template literals son una forma de crear cadenas de texto en JavaScript que permite incluir variables y expresiones dentro de las cadenas
-    //de manera más sencilla y legible. Se delimitan con backticks (`) en lugar de comillas simples (') o dobles (").
-    //Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena.
-    //Esto se llama interpolación de variables
+    let mensaje = "RESULTADO\nLa camiseta es de color: " + colorCamiseta + " y talla: " + tallaCamiseta;
+    imprimir(mensaje, "e5resultadoFormularios");
+}
 
-    /*Uso de ${}
-    Dentro de un template literal, ${} se usa para insertar variables o expresiones directamente en la cadena. 
-    Esto se llama interpolación de variables.
-    
-    Ejemplo Básico
-    Supongamos que tenemos dos variables:
-    
-    let nombre = "Juan";
-    let edad = 30;
-    
-    Con template literals y ${}, podemos crear una cadena que incluya estos valores de manera sencilla:
-    
-    let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
-    
-    Sin template literals, tendrías que hacer algo como esto:
-    
-    let mensaje = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años."; */
+//EJERCICIO 6
+/*
+Crea un formulario para introducir la edad del usuario.
+La edad debe ser un numero positivo y es obligatorio. Agrega validación Boostrap.
+Agrega un boton que al hacer click llame a una función que muestre un mensaje con la edad en dias, la edad en minutos y la edad en segundos.
 
-    //EJERCICIO 5
-    function seleccionaCamiseta() {
-        const color = camisetaColor = document.getElementById("colorCamiseta").value;
-        const talla = camisetaTalla = document.getElementById("tallaCamiseta").value;
-    }
+*/
+function calcularEdad(){
+    let edad = parseInt(document.getElementById("e6Edad").value);
 
+    const DIASYEAR = 365;
+    const DIAHORAS = 24;
+    const MINUTOSHORA = 60;
+    const SEGUNDOSHORA = 3600;
+    let dias = edad * DIASYEAR;
+    let minutos = dias * DIAHORAS * MINUTOSHORA;
+    let segundos = minutos * SEGUNDOSHORA;
+    
+    let mensaje = " Si tienes " + edad + " años " + " habrás vivido " + dias + " días, " + minutos + "minutos " + " y " + segundos + " segundos. ";
+    imprimir(mensaje, "e6resultado");
+}
