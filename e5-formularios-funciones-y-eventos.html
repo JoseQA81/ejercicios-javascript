@@ -299,7 +299,7 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
 
         <h3>Ejercicio 6: Crea un formulario para introducir la edad del usuario</h3>
         <p>1. La edad debe ser un numero positivo y es obligatorio. Agrega validación Boostrap.</p>
-        <p>1. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la edad en dias, la edad
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la edad en dias, la edad
             en minutos y la edad en segundos.</p>
 
         <form id="e6Formulario" class="was-validated">
@@ -314,6 +314,30 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
 
         </form>
         <p id="e6resultado"></p>
+
+        <h3>Ejercicio 7: Crea un formulario para mostrar información sobre un texto.</h3>
+        <p>1. Crea un elemento textArea que reciba un texto de longitud entre 10 y 100 caracteres. Debe ser obligatorio.
+            Agrega validación Boostrap.</p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el texto completo en
+            mayusculas, la primera letra del texto, la última letra y su longitud.</p>
+
+        <form id="e6Formulario" class="was-validated">
+
+            <div class="mb-3">
+                <textarea class="form-control" id="e7texto" name="comentarios" rows="4" minlength="10" maxlength="100"
+                    placeholder="Escribe tu texto aquí..." required></textarea>
+                <p class="valid-feedback">Texto válido</p>
+                <p class="invalid-feedback">Introduzca un texto entre 10 y 100 carácteres, es obligatorio</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" onclick="mostrarTexto()">Mostrar texto</button>
+
+        </form>
+
+    </div>
+
+
+
     </div>
 
 

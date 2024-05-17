@@ -191,3 +191,10 @@ function calcularEdad(){
     let mensaje = " Si tienes " + edad + " años " + " habrás vivido " + dias + " días, " + minutos + "minutos " + " y " + segundos + " segundos. ";
     imprimir(mensaje, "e6resultado");
 }
+
+//EJERCICIO 7
+/* Crea un formulario para mostrar información sobre un texto.</h3>
+        1. Crea un elemento textArea que reciba un texto de longitud entre 10 y 100 caracteres. Debe ser obligatorio.
+            Agrega validación Boostrap.</p>
+        2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el texto completo en
+            mayusculas, la primera letra del texto, la última letra y su longitud */
