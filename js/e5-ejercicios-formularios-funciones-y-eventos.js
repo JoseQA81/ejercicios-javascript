@@ -177,7 +177,7 @@ La edad debe ser un numero positivo y es obligatorio. Agrega validación Boostra
 Agrega un boton que al hacer click llame a una función que muestre un mensaje con la edad en dias, la edad en minutos y la edad en segundos.
 
 */
-function calcularEdad(){
+function calcularEdad() {
     let edad = parseInt(document.getElementById("e6Edad").value);
 
     const DIASYEAR = 365;
@@ -187,7 +187,7 @@ function calcularEdad(){
     let dias = edad * DIASYEAR;
     let minutos = dias * DIAHORAS * MINUTOSHORA;
     let segundos = minutos * SEGUNDOSHORA;
-    
+
     let mensaje = " Si tienes " + edad + " años " + " habrás vivido " + dias + " días, " + minutos + "minutos " + " y " + segundos + " segundos. ";
     imprimir(mensaje, "e6resultado");
 }
@@ -198,3 +198,36 @@ function calcularEdad(){
             Agrega validación Boostrap.</p>
         2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el texto completo en
             mayusculas, la primera letra del texto, la última letra y su longitud */
+
+function mostrarTexto() {
+    const TEXTO = document.getElementById("e7texto").value;
+    const E7RESULTADOTEXTO = document.getElementById("e7resultadoTexto");
+
+    const TEXTOMAYUSCULA = TEXTO.toUpperCase();
+    const PRIMERALETRA = TEXTO.charAt(0);
+    const ULTIMALETRA = TEXTO.charAt(TEXTO.length - 1);
+    const LONGITUDTEXTO = TEXTO.length;
+
+
+    const MENSAJE = " Texto en mayúscula: " + TEXTOMAYUSCULA + " \nLa primera letra: " + PRIMERALETRA + " \nSu última letra: " + ULTIMALETRA + " \nunto con su longitud: " + LONGITUDTEXTO;
+    imprimir(MENSAJE, "e7resultadoTexto");
+}
+
+//EJERCICIO 8
+/* Crea un formulario para calcular la nota media.</h3>
+1. Agrega 3 elementos que reciban numeros entre 0 y 10 y que no pueden estar vacío. Agrega validación
+            Boostrap.
+2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la media de los tres números. */
+
+function notaMedia() {
+    const PRIMERANOTA = parseFloat(document.getElementById("e8nota1").value);
+    const SEGUNDANOTA = parseFloat(document.getElementById("e8nota2").value);
+    const TERCERANOTA = parseFloat(document.getElementById("e8nota3").value);
+
+    const NOTAMEDIA = (PRIMERANOTA + SEGUNDANOTA + TERCERANOTA) / 3;
+    const RESULTADOMEDIA = document.getElementById("e8resultadoNotaMedia");
+
+    const mensaje = "Nota primer examen: " + PRIMERANOTA + " \nNota segundo examen: " + SEGUNDANOTA + " \nNota tercer examen: " + TERCERANOTA + " \nDa una nota media de: " + NOTAMEDIA.toFixed(1);
+        imprimir(mensaje, "e8resultadoNotaMedia");
+} /*Preguntar por qué si en html he limitado el número de decimales con "step="0.1", por qué he tenido que agregar
+ al final del mensaje toFixed(1) para que me limitase bien los decimales. */

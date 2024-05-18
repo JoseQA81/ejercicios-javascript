@@ -133,7 +133,7 @@
     <div id="contenidoEjercicios" class="container mt-5">
 
         <h2>EJERCICIOS</h2>
-        <p>1. Crea un formulario para introducir nombre, ciudad y fecha de nacimiento.</p>
+        <h3>EJERCICIOS 1 - 1. Crea un formulario para introducir nombre, ciudad y fecha de nacimiento.</h3>
         <p>1- Agrega validación con Boostrap. Todos los campos son obligatorios.
             El nombre y la ciudad debe tener entre 3
             y 30 caracteres. La fecha de nacimiento tiene que estar entre 1900 y 2024
@@ -321,25 +321,67 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
         <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el texto completo en
             mayusculas, la primera letra del texto, la última letra y su longitud.</p>
 
-        <form id="e6Formulario" class="was-validated">
+        <form id="e7Formulario" class="was-validated">
 
             <div class="mb-3">
                 <textarea class="form-control" id="e7texto" name="comentarios" rows="4" minlength="10" maxlength="100"
-                    placeholder="Escribe tu texto aquí..." required></textarea>
+                    placeholder="Escribe tu texto aquí..." style="max-width: 750px;" required></textarea>
                 <p class="valid-feedback">Texto válido</p>
-                <p class="invalid-feedback">Introduzca un texto entre 10 y 100 carácteres, es obligatorio</p>
+                <p class="invalid-feedback">Introduzca un texto entre 10 y 100 carácteres, es obligatorio.</p>
             </div>
 
             <button type="submit" class="btn btn-primary" onclick="mostrarTexto()">Mostrar texto</button>
+        </form>
+        <p id="e7resultadoTexto"></p>
+
+
+        <h3>Ejercicio 8: Crea un formulario para calcular la nota media.</h3>
+        <p>1. Agrega 3 elementos que reciban numeros entre 0 y 10 y que no pueden estar vacío. Agrega validación
+            Boostrap.
+        </p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con la media de los tres
+            números.</p>
+
+        <form id="e8Formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="number" id="e8nota1" placeholder="Introduce la nota 1" style="max-width: 250px;" required
+                    min="0" max="10" step="0.1" class="form-control">
+                <p class="valid-feedback">¡Correcto!</p>
+                <p class="invalid-feedback">Por favor, introduce una nota válida entre 0 y 10, es obligatorio.</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="number" id="e8nota2" placeholder="Introduce la nota 2" style="max-width: 250px;" required
+                    min="0" max="10" step="0.1" class="form-control">
+                <p class="valid-feedback">¡Correcto!</p>
+                <p class="invalid-feedback">Por favor, introduce una nota válida entre 0 y 10, es obligatorio.</p>
+            </div>
+
+            <div class="mb-3">
+                <input type="number" id="e8nota3" placeholder="Introduce la nota 3" style="max-width: 250px;" required
+                    min="0" max="10" step="0.1" class="form-control">
+                <p class="valid-feedback">¡Correcto!</p>
+                <p class="invalid-feedback">Por favor, introduce una nota válida entre 0 y 10, es obligatorio.</p>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="notaMedia()">Mostrar resultado</button>
 
         </form>
+        <p id="e8resultadoNotaMedia"></p>
+
+        <h3>Ejercicio 9: Crea un formulario para que el usuario pueda seleccionar una cantidad de camisetas, que puede
+            ser vacio, 1,2 o 3, una cantidad de zapatos también entre vacio, 1,2 o 3 y una cantidad de sombreros, que
+            puede ser vacio, 1,2, o 3.</h3>
+        <p>Agrega 1 elemento para seleccionar la cantidad de cada producto. El elemento select puede estar vacio.
+        </p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre de cada
+            producto y su cantidad. Si ha dejado vacio, no mostrará nada en su cantidad.</p>
+
+            <form id="e8Formulario" class="was-validated">
+
+            </form>
 
     </div>
-
-
-
-    </div>
-
 
     <script src="js/e5-formularios-funciones-y-eventos.js"></script>
     <script src="js/e5-ejercicios-formularios-funciones-y-eventos.js"></script>
