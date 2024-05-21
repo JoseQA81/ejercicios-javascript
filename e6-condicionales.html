@@ -13,12 +13,137 @@
 
     <div class="p-5 bg-dark text-white text-center">
         <h1>Bootcamp QA: Condicionales</h1>
-        <p><a href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals">Condicionales</a></p>
+        <p><a
+                href="https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals">Condicionales</a>
+        </p>
     </div>
-    <br>
+
+    <div id="ejemplosCondicionales" class="container mt-5">
+        <h3>Ejemplo 1: Condicionales if / else. Comprobar si un valor es igual a otro</h3>
+
+        <form id="ejemplo1Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e1numero" placeholder="Introduce un numero" required class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="numeroEsCinco()">Enviar</button>
+        </form>
+        <p id="ej1resultado"></p>
+
+        <h3>Ejemplo 2: Condicionales if / else. Comprobar si un valor es mayor que otro</h3>
+        <form id="ejemplo2Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e2numero" placeholder="Introduce un numero" required class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="numeroMayorCinco()">Enviar</button>
+        </form>
+        <p id="ej2resultado"></p>
+
+        <h3>Ejemplo 3: Condicionales if / else. Comparar textos</h3>
+        <form id="ejemplo3Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e3ciudad" placeholder="Introduce una ciudad" required class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El campo numero es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="ciudadNoEsMalaga()">Enviar</button>
+        </form>
+        <p id="ej3resultado"></p>
+
+        <h3>Ejemplo 4: Condicionales if / else. Validar Formulario</h3>
+        <form id="ejemplo4Condicionales" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e4animal" placeholder="Introduce un animal" required minlength="4" maxlength="10"
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El nombre del animal debe tener entre 4 y 10 caracteres. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarNombreDelAnimal()">Enviar</button>
+        </form>
+        <p id="ej4resultado"></p>
+
+        <h3>Ejemplo 5: Condicionales múltiples if / else. Mostrar precio segun producto elegido</h3>
+        <form id="ejemplo5Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e5productos">
+                    <option value="camiseta">Camiseta</option>
+                    <option value="pantalon">Pantalon</option>
+                    <option value="chaqueta">Chaqueta</option>
+                    <option value="gorra">Gorra</option>
+                </select>
+
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPrecio()">Ver Precio</button>
+        </form>
+        <p id="ej5resultado"></p>
+
+        <h3>Ejemplo 6: Condicionales if / else anidados. Si elige destino paris, tiene un descuento de 100 euros si se
+            va
+            por mas de 10 dias. </h3>
+        <form id="ejemplo6Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e6destinos">
+                    <option value="paris">Paris 10 euros</option>
+                    <option value="newyork">Nueva York 20 euros</option>
+                    <option value="roma">Roma 30 euros</option>
+                    <option value="canarias">Canarias 40 euros</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e6numerodedias" placeholder="Elige el numero de dias" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Debes irte al menos un dia. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPrecioViaje()">Ver Precio</button>
+        </form>
+        <p id="ej6resultado"></p>
+
+        <h2>EJERCICIOS CONDICIONALES</h2>
+        <h3>Ejercicio 1 - Crea un formulario para que el usuario introduzca su edad y vea un mensaje indicando si es
+            mayor de edad o no.</h3>
+        <h3>Agrega un elemento al formulario para introducir un numero. Este campo no puede estar vacio.</h3>
+        <h3>Agrega un boton que al hacer click llame a una funcion que muestre un mensaje es mayor de edad, si su edad
+            es igual o mayor a 18 años y un mensaje es menor de edad de lo contrario.</h3>
+
+            <form id="e1CondicionalesEdad" class="was-validated">
+                <div class="mb-3">
+                    <input type="number" id="e1edad" placeholder="Introduce un numero" required min="1" class="form-control">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">El campo número es obligatorio </p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="introducirEdad()">Enviar</button>
+            </form>
+            <p id="e1resultadoEdad"></p>
+
+            <h3>Ejercicio 2 - Crea un formulario que indique cual es el mayor de dos numeros.</h3>
+            <h3>Agrega dos elementos al formulario que reciban dos numeros enteros. Este campo no puede estar vacio.</h3>
+            <h3>Agrega un boton que al hacer click llame a una funcion que indique cual de los dos numeros es el mayor.</h3>
+
+            <form id="e2CondicionalesNumeros" class="was-validated">
+                <div class="mb-3">
+                    <input type="number" id="e2numero1" placeholder="Introduce un numero" required min="1" class="form-control">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">El campo número es obligatorio </p>
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="e2numero2" placeholder="Introduce un numero" required min="1" class="form-control">
+                    <p class="valid-feedback">Correcto</p>
+                    <p class="invalid-feedback">El campo número es obligatorio </p>
+                </div>
+                <button type="button" class="btn btn-success" onclick="introducirNumeros()">Enviar</button>
+            </form>
+            <p id="e2resultadoNumeros"></p>
 
 
-    <script src="js/e6-condicionales.js"></script>
+
+
+
+        <script src="js/e6-condicionales.js"></script>
+        <script src="js/e6-ejercicios-condicionales.js"></script>
 </body>
 
 </html>
