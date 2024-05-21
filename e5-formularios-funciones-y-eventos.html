@@ -369,18 +369,83 @@ significa que los usuarios pueden aumentar o disminuir el valor del campo en inc
         </form>
         <p id="e8resultadoNotaMedia"></p>
 
+
         <h3>Ejercicio 9: Crea un formulario para que el usuario pueda seleccionar una cantidad de camisetas, que puede
             ser vacio, 1,2 o 3, una cantidad de zapatos también entre vacio, 1,2 o 3 y una cantidad de sombreros, que
             puede ser vacio, 1,2, o 3.</h3>
-        <p>Agrega 1 elemento para seleccionar la cantidad de cada producto. El elemento select puede estar vacio.
+        <p>1. Agrega 1 elemento para seleccionar la cantidad de cada producto. El elemento select puede estar vacio.
         </p>
         <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre de cada
             producto y su cantidad. Si ha dejado vacio, no mostrará nada en su cantidad.</p>
 
-            <form id="e8Formulario" class="was-validated">
+        <form id="e9Formulario" class="was-validated">
 
-            </form>
+            <div class="mb-3">
+                <select id="e9cantidadCamisetas" class="form-select" style="max-width: 350px;" min="0" max="3" required>
+                    <option value="">No has seleccionado nada</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <div class="valid-feedback">Cantidad camisetas</div>
+                <div class="invalid-feedback">Por favor, selecciona una cantidad válida.</div>
+            </div>
 
+            <div class="mb-3">
+                <select id="e9cantidadZapatos" class="form-select" style="max-width: 350px;" min="0" max="3" required>
+                    <option value="">No has seleccionado nada</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <div class="valid-feedback">Cantidad zapatos</div>
+                <div class="invalid-feedback">Por favor, selecciona una cantidad válida.</div>
+            </div>
+
+            <div class="mb-3">
+                <select id="e9cantidadSombreros" class="form-select" style="max-width: 350px;" min="0" max="3" required>
+                    <option value="">No has seleccionado nada</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <div class="valid-feedback">Cantidad sombreros</div>
+                <div class="invalid-feedback">Por favor, selecciona una cantidad válida.</div>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="seleccionaCantidad()">Selecciona cantidad</button>
+        </form>
+        <p id="e9resultadoCantidad"></p>
+
+        <h3>Ejercicio 10: Crea un formulario para que el usuario pueda introducir el nombre de su mascota, y seleccionar
+            el tipo: perro, gato, tortuga, pajaro.</h3>
+        <p>1. Agrega 1 elemento agregar el nombre de la mascota y el tipo. Ambos pueden estar vacios (el usuario puede
+            no tener mascota, o no ser de ninguno de esos tipos).
+        </p>
+        <p>2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con los datos de la mascota,
+            es decir, nombre y tipo.</p>
+
+        <form id="e10Formulario" class="was-validated">
+
+            <div class="mb-3">
+                <input type="text" id="e10nombreMascota" style="max-width: 350px;"
+                    placeholder="Introduce el nombre de tu mascota" class="form-control">
+                <div class="valid-feedback">¡Nombre válido!</div>
+                <div class="invalid-feedback">Por favor, introduce un nombre válido.</div>
+            </div>
+
+            <div class="mb-3">
+                <select id="e10tipoMascota" class="form-select" style="max-width: 350px;" minlength="2" max="10"
+                    required>
+                    <option value="">Selecciona el tipo de mascota</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Tortuga">Tortuga</option>
+                    <option value="Pajaro">Pájaro</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="nombreMascota()">Selecciona mascota</button>
+        </form>
+        <p id="e10resultadoMascota"></p>
     </div>
 
     <script src="js/e5-formularios-funciones-y-eventos.js"></script>

@@ -228,6 +228,38 @@ function notaMedia() {
     const RESULTADOMEDIA = document.getElementById("e8resultadoNotaMedia");
 
     const mensaje = "Nota primer examen: " + PRIMERANOTA + " \nNota segundo examen: " + SEGUNDANOTA + " \nNota tercer examen: " + TERCERANOTA + " \nDa una nota media de: " + NOTAMEDIA.toFixed(1);
-        imprimir(mensaje, "e8resultadoNotaMedia");
+    imprimir(mensaje, "e8resultadoNotaMedia");
 } /*Preguntar por qué si en html he limitado el número de decimales con "step="0.1", por qué he tenido que agregar
- al final del mensaje toFixed(1) para que me limitase bien los decimales. */
+ al final del mensaje toFixed(1) para que me limitase bien los decimales.
+  */
+
+//EJERCICIO 9
+/* Crea un formulario para que el usuario pueda seleccionar una cantidad de camisetas, que puede
+           ser vacio, 1,2 o 3, una cantidad de zapatos también entre vacio, 1,2 o 3 y una cantidad de sombreros, que
+           puede ser vacio, 1,2, o 3.
+1. Agrega 1 elemento para seleccionar la cantidad de cada producto. El elemento select puede estar vacio.
+2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con el nombre de cada
+           producto y su cantidad. Si ha dejado vacio, no mostrará nada en su cantidad. */
+
+function seleccionaCantidad() {
+    const cantidadCamisetas = document.getElementById("e9cantidadCamisetas").value || "0";
+    const cantidadZapatos = document.getElementById("e9cantidadZapatos").value || "0";
+    const cantidadSombreros = document.getElementById("e9cantidadSombreros").value || "0";
+
+    const mensaje = "Cantidad Camisetas: " + cantidadCamisetas + " \nCantidad Zapatos: " + cantidadZapatos + " \nCantidad Sombreros: " + cantidadSombreros;
+    imprimir(mensaje, "e9resultadoCantidad");
+}
+
+//EJERCICIO 10
+/* Crea un formulario para que el usuario pueda introducir el nombre de su mascota, y seleccionar el tipo: perro, gato, tortuga, pájaro.
+1. Agrega 1 elemento agregar el nombre de la mascota y el tipo. 
+Ambos pueden estar vacíos (el usuario puede no tener mascota, o no ser de ninguno de esos tipos)
+2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con los datos de la mascota, es decir, nombre y tipo.  */
+
+function nombreMascota(){
+    const NOMBREMASCOTA = document.getElementById("e10nombreMascota").value || "No tengo mascota";
+    const TIPOMASCOTA = document.getElementById("e10tipoMascota").value || "No tengo mascota";
+
+    const mensaje = "El nombre de la mascota es: " + NOMBREMASCOTA + "\nEl tipo de mascota es: " + TIPOMASCOTA;
+    imprimir (mensaje, "e10resultadoMascota");
+}
