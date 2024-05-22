@@ -102,6 +102,108 @@
         </form>
         <p id="ej6resultado"></p>
 
+        <h3>Ejemplo 7: Condicionales Operador Logico AND &&</h3>
+        <p>Muestra si el usuario puede entrar gratis al museo o no. Para entrar gratis debe ser menor de 16 y ser de
+            Malaga</p>
+        <form id="ejemplo7Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e7ciudad" required>
+                    <option value="paris">Paris</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="malaga">Malaga</option>
+                    <option value="sevilla">Sevilla</option>
+                </select>
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">La ciudad es obligatoria</p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e7edad" placeholder="Introduce tu edad" required min="1" class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Debes tener mas de 1 año de edad</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="entradaMuseoGratis()">Enviar</button>
+        </form>
+        <p id="e7resultado"></p>
+
+        <h3>Ejemplo 8: Condicionales Operador Logico OR || </h3>
+        <p>Muestra si el usuario puede entrar gratis al museo o no. Para entrar gratis debe ser menor de 16 o ser de
+            Malaga</p>
+        <form id="ejemplo8Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e8ciudad" required>
+                    <option value="paris">Paris</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="malaga">Malaga</option>
+                    <option value="sevilla">Sevilla</option>
+                </select>
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">La ciudad es obligatoria</p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e8edad" placeholder="Introduce tu edad" required min="1" class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Debes tener mas de 1 año de edad</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="entradaMuseoORGratis()">Enviar</button>
+        </form>
+        <p id="e8resultado"></p>
+
+        <h3>Ejemplo 9: Condicionales Operador Logico NOT ! </h3>
+        <p>Muestra si el usuario puede entrar gratis al museo o no. Solo pueden entrar gratis quienes no sean de malaga
+            con menos de 16</p>
+        <form id="ejemplo9Condicionales" class="was-validated">
+            <div class="mb-3">
+                <select id="e9ciudad" required>
+                    <option value="paris">Paris</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="malaga">Malaga</option>
+                    <option value="sevilla">Sevilla</option>
+                </select>
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">La ciudad es obligatoria</p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e9edad" placeholder="Introduce tu edad" required min="1" class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Debes tener mas de 1 año de edad</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="entradaNOTMuseoGratis()">Enviar</button>
+        </form>
+        <p id="e9resultado"></p>
+
+        <h3>Ejemplo 10: Condicionales Switch</h3>
+        <p>El usuario debe introducir su mes de nacimiento de 1 a 12 un mes y debe mostrar su horoscopo segun el mes
+            elegido.</p>
+        <form id="ejemplo10Condicionales" class="was-validated">
+
+            <div class="mb-3">
+                <input type="number" id="e10mesNacimiento" placeholder="Introduce tu mes de nacimiento" required min="1"
+                    max="12" class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Debes introducir un mes entre 1 y 12</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarHoroscopoSwitch()">mostrar Horoscopo</button>
+        </form>
+        <p id="e10resultado"></p>
+    </div>
+
+    
+
+    <div id="ejerciciosCondicionales" class="container mt-5">
+        <h3>Ejercicio 1: Formulario comprobar si es mayor de edad </h3>
+        <form class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ex1number" placeholder="Introduce tu edad" required min="1"
+                    class="form-control" />
+                <p class="valid-feedback">La edad introducida es correcta</p>
+                <p class="invalid-feedback">La edad es obligatoria y debe ser positiva</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calcularEdad()">Edad</button>
+
+        </form>
+
+        <p id="ex1resultado"></p>
+
         <h2>EJERCICIOS CONDICIONALES</h2>
         <h3>Ejercicio 1 - Crea un formulario para que el usuario introduzca su edad y vea un mensaje indicando si es
             mayor de edad o no.</h3>
@@ -109,41 +211,44 @@
         <h3>Agrega un boton que al hacer click llame a una funcion que muestre un mensaje es mayor de edad, si su edad
             es igual o mayor a 18 años y un mensaje es menor de edad de lo contrario.</h3>
 
-            <form id="e1CondicionalesEdad" class="was-validated">
-                <div class="mb-3">
-                    <input type="number" id="e1edad" placeholder="Introduce un numero" required min="1" class="form-control">
-                    <p class="valid-feedback">Correcto</p>
-                    <p class="invalid-feedback">El campo número es obligatorio </p>
-                </div>
-                <button type="button" class="btn btn-success" onclick="introducirEdad()">Enviar</button>
-            </form>
-            <p id="e1resultadoEdad"></p>
+        <form id="e1CondicionalesEdad" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e1edad" placeholder="Introduce un numero" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="introducirEdad()">Enviar</button>
+        </form>
+        <p id="e1resultadoEdad"></p>
 
-            <h3>Ejercicio 2 - Crea un formulario que indique cual es el mayor de dos numeros.</h3>
-            <h3>Agrega dos elementos al formulario que reciban dos numeros enteros. Este campo no puede estar vacio.</h3>
-            <h3>Agrega un boton que al hacer click llame a una funcion que indique cual de los dos numeros es el mayor.</h3>
+        <h3>Ejercicio 2 - Crea un formulario que indique cual es el mayor de dos numeros.</h3>
+        <h3>Agrega dos elementos al formulario que reciban dos numeros enteros. Este campo no puede estar vacio.</h3>
+        <h3>Agrega un boton que al hacer click llame a una funcion que indique cual de los dos numeros es el mayor.</h3>
 
-            <form id="e2CondicionalesNumeros" class="was-validated">
-                <div class="mb-3">
-                    <input type="number" id="e2numero1" placeholder="Introduce un numero" required min="1" class="form-control">
-                    <p class="valid-feedback">Correcto</p>
-                    <p class="invalid-feedback">El campo número es obligatorio </p>
-                </div>
-                <div class="mb-3">
-                    <input type="number" id="e2numero2" placeholder="Introduce un numero" required min="1" class="form-control">
-                    <p class="valid-feedback">Correcto</p>
-                    <p class="invalid-feedback">El campo número es obligatorio </p>
-                </div>
-                <button type="button" class="btn btn-success" onclick="introducirNumeros()">Enviar</button>
-            </form>
-            <p id="e2resultadoNumeros"></p>
+        <form id="e2CondicionalesNumeros" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e2numero1" placeholder="Introduce un numero" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e2numero2" placeholder="Introduce un numero" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="introducirNumeros()">Enviar</button>
+        </form>
+        <p id="e2resultadoNumeros"></p>
 
 
+    </div>
 
 
-
-        <script src="js/e6-condicionales.js"></script>
-        <script src="js/e6-ejercicios-condicionales.js"></script>
+    <script src="js/e6-condicionales.js"></script>
+    <script src="js/e6-ejercicios-condicionales.js"></script>
 </body>
 
 </html>
