@@ -142,7 +142,7 @@ function entradaMuseoGratis () {
     imprimir(mensaje,"e7resultado");
 }
 //EJEMPLO 8: Condicionales Operador Logico OR: ||
-//OR significaque debe cumplirse UNA de las condiciones.
+//OR significa que debe cumplirse UNA de las condiciones.
 function entradaMuseoORGratis() {
     let ciudad = document.getElementById("e8ciudad").value;
     let edad = parseInt(document.getElementById("e8edad").value);
