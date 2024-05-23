@@ -256,10 +256,10 @@ function seleccionaCantidad() {
 Ambos pueden estar vacíos (el usuario puede no tener mascota, o no ser de ninguno de esos tipos)
 2. Agrega un boton que al hacer click llame a una función que muestre un mensaje con los datos de la mascota, es decir, nombre y tipo.  */
 
-function nombreMascota(){
+function nombreMascota() {
     const NOMBREMASCOTA = document.getElementById("e10nombreMascota").value || "No tengo mascota";
     const TIPOMASCOTA = document.getElementById("e10tipoMascota").value || "No tengo mascota";
 
     const mensaje = "El nombre de la mascota es: " + NOMBREMASCOTA + "\nEl tipo de mascota es: " + TIPOMASCOTA;
-    imprimir (mensaje, "e10resultadoMascota");
+    imprimir(mensaje, "e10resultadoMascota");
 }
