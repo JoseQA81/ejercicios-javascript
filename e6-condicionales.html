@@ -243,6 +243,25 @@
         </form>
         <p id="e2resultadoNumeros"></p>
 
+        <h3>Ejercicio 3 - Crea un formulario para que el usuario introduzca su nota y vea si esta aprobado o suspenso.
+        </h3>
+        <h3>Agrega un elemento al formulario para introducir un numero. Este campo no puede estar vacio y debe ser entre
+            0 y 10.
+            Agrega un boton que al hacer click llame a una funcion que muestre un mensaje suspenso si la nota es menor
+            que 5, y aprobado sino.
+        </h3>
+
+        <form id="e3CondicionalesNota" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ejer3notas" placeholder="Introduce tu nota" required min="0" max="10"
+                    step="0.1" class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="introducirNotas()">Enviar</button>
+        </form>
+        <p id="ejer3resultadoNotas"></p>
+
         <h3>Ejercicio 4 - Crea un formulario para que el usuario introduzca su nombre y le diga si es un nombre largo o
             corto.</h3>
         <h3>Agrega un elemento al formulario para introducir un nombre. Este campo no puede estar vacio.
@@ -250,14 +269,77 @@
             mas de 10 caracteres o es un nombre corto si tiene menos de 10.
         </h3>
 
-        <form id="ejer5Condicionales" class="was-validated">
+        <form id="ejer4Condicionales" class="was-validated">
             <div class="mb-3">
-                <input type="text" id="ejer5cadenaNombre" placeholder="Introduce un nombre" required class="form-control">
+                <input type="text" id="ejer4cadenaNombre" placeholder="Introduce un nombre" required
+                    class="form-control">
             </div>
             <button type="button" class="btn btn-success" onclick="nombreCortoLargo()">Enviar</button>
         </form>
+        <p id="ejer4resultado"></p>
+
+        <h3>Ejercicio 5 - Crea un formulario para ver la estacion del año segun el mes introducido.</h3>
+        <h3>Agrega un elemento select al formulario para seleccionar un mes. Este campo no puede estar vacio.
+            Agrega un boton que al hacer click llame a una funcion que muestre la estación del año: PRIMAVERA, VERANO,
+            OTOÑO o INVIERNO según el mes que haya seleccionado. Por ejemplo, si selecciona JUNIO, debe aparecer el
+            mensaje VERANO.
+        </h3>
+
+        <form class="was-validated">
+            <div class="mb-3">
+                <label for="Selecciona un mes">Selecciona un mes:</label>
+                <select id="ejer5estacion" required>
+                    <option value="Enero">Enero</option>
+                    <option value="Febrero">Febrero</option>
+                    <option value="Marzo">Marzo</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Mayo">Mayo</option>
+                    <option value="Junio">Junio</option>
+                    <option value="Julio">Julio</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Septiembre">Septiembre</option>
+                    <option value="Octubre">Octubre</option>
+                    <option value="Noviembre">Noviembre</option>
+                    <option value="Diciembre">Diciembre</option>
+                </select>
+                <button type="button" class="btn btn-success" onclick="estacionMes()">El mes corresponde a la
+                    estación</button>
+        </form>
         <p id="ejer5resultado"></p>
 
+        Ejercicio 6 - Crea una calculadora</h3>
+        <h3>Agrega un formulario donde el usuario pueda introducir dos numeros y seleccionar la operacion suma, resta,
+            multiplicacion o division. Los campos no pueden estar vacios.
+            Agrega un boton que al hacer click llame a una funcion que muestre el resultado de la operación
+            seleccionada.</h3>
+
+        <form id="e6CondicionalesCalculadora" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e6calculadora" placeholder="Introduce un numero" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="e6calculadora2" placeholder="Introduce un numero" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo número es obligatorio </p>
+            </div>
+            <div class="mb-3">
+                <select id="e6operacion" class="form-select" required>
+                    <option value="" disabled selected>Selecciona una operación</option>
+                    <option value="sumar">Suma</option>
+                    <option value="restar">Resta</option>
+                    <option value="multiplicar">Multiplicación</option>
+                    <option value="dividir">División</option>
+                </select>
+                <p class="valid-feedback">Operación seleccionada</p>
+                <p class="invalid-feedback">El campo operación es obligatorio </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="calculadoraNumeros()">Enviar</button>
+        </form>
+        <p id="e6calculadoraresultado"></p>
 
     </div>
 
