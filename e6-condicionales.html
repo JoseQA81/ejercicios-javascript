@@ -328,7 +328,8 @@
             </div>
             <div class="mb-3">
                 <select id="e6operacion" class="form-select" required>
-                    <option value="" disabled selected>Selecciona una operación</option> <!-- PREGUNTAR REYES "disabled selected" -->
+                    <option value="" disabled selected>Selecciona una operación</option>
+                    <!-- PREGUNTAR REYES "disabled selected" -->
                     <option value="sumar">Suma</option>
                     <option value="restar">Resta</option>
                     <option value="multiplicar">Multiplicación</option>
@@ -338,8 +339,39 @@
                 <p class="invalid-feedback">El campo operación es obligatorio </p>
             </div>
             <button type="button" class="btn btn-success" onclick="calculadoraNumeros()">Enviar</button>
+            <button type="button" class="btn btn-success" onclick="calculadoraNumerosSwitch()">Enviar</button>
+            <!--VERSIÓN CON SWITCH DEL EJERCICIO -->
         </form>
         <p id="e6calculadoraresultado"></p>
+
+        Ejercicio 7 - Crea un formulario que muestre el precio final segun el producto y la forma de pago elegida.</h3>
+        <h3>Agrega un formulario donde el usuario pueda elegir entre los siguientes productos: 1. Camiseta 10 euros, 2.
+            Sudadera 20 euros, 3. Bufanda 5 euros, este campo es obligatorio y solo puede elegir un producto. Incluye
+            también un elemento donde pueda introducir la cantidad, que es tambien obligatorio y debe ser mayor a 0.
+            Agrega un boton comprar que al hacer click muestre el precio total del producto elegido teniendo en cuenta
+            la cantidad. Por ejemplo si elige 2 camisetas, el precio final seria 20 euros.</h3>
+
+        <form id="ejer7productoYpago" class="was-validated">
+            <div class="mb-3">
+                <label for="producto">Producto:</label>
+                <select id="ejer7productos" class="form-control" required>
+                    <option value="" disabled selected>Selecciona un producto</option>
+                    <option value="10">Camiseta - 10 €</option>
+                    <option value="20">Sudadera - 20 €</option>
+                    <option value="5">Bufanda - 5 €</option>
+                </select>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+
+            </div>
+            <div class="mb-3">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" class="form-control" required min="1"
+                    placeholder="Introduce la cantidad">
+                <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPrecioTotalPago()">Ver Precio</button>
+        </form>
+        <p id="ejer7resultadopago"></p>
 
     </div>
 

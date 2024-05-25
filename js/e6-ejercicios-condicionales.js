@@ -132,3 +132,37 @@ function calculadoraNumeros() {
 
     imprimir(mensaje, "e6calculadoraresultado");
 }//La operación (numero2 !== 0) numero2 no es igual a 0, no es mío, es sugerencia de ChatGpt
+
+//VERSION EJERCICIO 6 CON SWITCH
+function calculadoraNumerosSwitch() {
+    let numero1 = parseFloat(document.getElementById("e6calculadora").value);
+    let numero2 = parseFloat(document.getElementById("e6calculadora2").value);
+    let operacion = document.getElementById("e6operacion").value;
+    let resultado = 0;
+    let mensaje = "";
+
+    switch (operacion) {
+        case "sumar":
+            resultado = numero1 + numero2;
+            mensaje = mensaje = "La suma de " + numero1 + " más " + numero2 + " es igual a: " + resultado;
+            break;
+        case "restar":
+            resultado = numero1 - numero2;
+            mensaje = "La resta de " + numero1 + " menos " + numero2 + " es igual a: " + resultado;
+        case "multiplicar":
+            resultado = numero1 * numero2;
+            mensaje = "La multiplicación de " + numero1 + " por " + numero2 + " es igual a: " + resultado;
+        case "dividir":
+            if (numero2 !== 0) {
+                resultado = numero1 / numero2;
+                mensaje = "La división de " + numero1 + " entre " + numero2 + " es igual a: " + resultado;
+            }
+            else {
+                mensaje = "No se puede dividir entre 0";
+            }
+            break;
+    }
+    imprimir(mensaje,"e6calculadoraresultado");
+
+}
+
