@@ -365,13 +365,85 @@
             </div>
             <div class="mb-3">
                 <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" class="form-control" required min="1"
+                <input type="number" id="ejer7cantidad" class="form-control" required min="1"
                     placeholder="Introduce la cantidad">
                 <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
             </div>
             <button type="button" class="btn btn-success" onclick="mostrarPrecioTotalPago()">Ver Precio</button>
         </form>
         <p id="ejer7resultadopago"></p>
+
+        Ejercicio 8 - Crea un formulario que calcule el precio total de un hotel segun la habitacion y el numero de
+        noches
+        elegidas.</h3>
+        <h3>Agrega un formulario donde el usuario pueda elegir el tipo de habitacion: Suite: 100 euros, habitacion
+            doble: 70 euros. Habitacion individual: 50 euros. Este campo es obligatorio. Otro campo para introducir el
+            numero de noches que debe ser mayor a 0.
+            Agrega un boton que muestre el precio total. Si el usuario se queda por mas de 5 noches, se le aplica un
+            descuento a la estancia del 20%.</h3>
+
+        <form id="ejer8hotel" class="was-validated">
+            <div class="mb-3">
+                <select id="ejer8habitacion" class="form-control" required>
+                    <option value="" disabled selected>Selecciona tipo de habitación</option>
+                    <option value="suite">Suite - 100 €</option>
+                    <option value="doble">Habitación doble - 70 €</option>
+                    <option value="individual">Habitación individual - 50 €</option>
+                </select>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ejer8cantidadNoches" class="form-control" required min="1"
+                    placeholder="¿Cuántas noches?">
+                <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="CuantasNoches()">Ver Precio</button>
+        </form>
+        <p id="ejer8resultadonoches"></p>
+
+        Ejercicio 9 - Crea un formulario calcule el precio total del alquiler de un coche.</h3>
+        <h3>Agrega un formulario donde el usuario pueda elegir el tipo de coche: Deluxe: 100 euros, Standard: 70 euros.
+            Basic: 50 euros. Este campo es obligatorio. El usuario tambien debe poder elegir el numero de dias, este
+            campo es obligatorio y debe ser mayor a 0. El usuario debe introducir tambien su año de nacimiento, este
+            campo es obligatorio. Y debe elegir el seguro: todo riesgo 20 euros por dia. Basico 5 euros por día.
+            Agrega un boton que muestre el precio total. Teniendo en cuenta las siguientes reglas:
+            El usuario debe ser mayor de 25 años, sino mostrara un mensaje indicando que no puede alquilar el coche.
+            Si el coche se alquila por mas de 7 dias, se aplica un descuento del 10% al alquiler.
+            Si el usuario ha elegido el seguro basico, debe mostrar ademas del precio final, un mensaje indicando que
+            debe dejar un deposito de 500 euros.</h3>
+
+        <form id="ejer9coche" class="was-validated">
+            <div class="mb-3">
+                <select id="ejer9tipocoche" class="form-control" required>
+                    <option value="" disabled selected>Selecciona tipo de coche</option>
+                    <option value="deluxe">Deluxe - 100 €</option>
+                    <option value="standard">Standard - 70 €</option>
+                    <option value="basic">Basic - 50 €</option>
+                </select>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ejer9numerodias" class="form-control" required min="1"
+                    placeholder="¿Cuántas noches?">
+                <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ejer9nacimiento" class="form-control" required placeholder="Año de nacimiento">
+                <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+            </div>
+            <div class="mb-3">
+                <select id="ejer9seguro" class="form-control" required>
+                    <option value="" disabled selected>Selecciona tipo de seguro</option>
+                    <option value="todoriesgo">Todo riesgo: 20 € por día</option>
+                    <option value="basico">Básico: 5 € por día</option>
+                </select>
+                <div class="invalid-feedback">Este campo es obligatorio.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="precioAlquilerCoche()">Ver Precio</button>
+        </form>
+        <p id="ejer9resultadocoches"></p>
 
     </div>
 

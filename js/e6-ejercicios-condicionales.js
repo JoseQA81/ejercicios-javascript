@@ -162,7 +162,69 @@ function calculadoraNumerosSwitch() {
             }
             break;
     }
-    imprimir(mensaje,"e6calculadoraresultado");
+    imprimir(mensaje, "e6calculadoraresultado");
 
 }
 
+/*EJERCICIO 7 - Crea un formulario que muestre el precio final segun el producto y la forma de pago elegida.
+Agrega un formulario donde el usuario pueda elegir entre los siguientes productos: 
+1. Camiseta 10 euros, 2. Sudadera 20 euros, 3. Bufanda 5 euros, este campo es obligatorio y solo puede elegir un producto. 
+Incluye también un elemento donde pueda introducir la cantidad, que es tambien obligatorio y debe ser mayor a 0.
+Agrega un boton comprar que al hacer click muestre el precio total del producto elegido teniendo en cuenta la cantidad. 
+Por ejemplo si elige 2 camisetas, el precio final seria 20 euros.
+ */
+function mostrarPrecioTotalPago() {
+    let producto = parseInt(document.getElementById("ejer7productos").value);
+    let cantidad = parseInt(document.getElementById("ejer7cantidad").value);
+    let precioFinal = 0;
+    let mensaje = "";
+
+    if (producto && cantidad > 0) {
+        precioFinal = producto * cantidad;
+        mensaje = "El precio total es de: " + precioFinal + " € ";
+    }
+    else {
+        mensaje = "Por favor, selecciona producto y cantidad válidos";
+    }
+    imprimir(mensaje, "ejer7resultadopago");
+}
+
+/*EJERCICIO 8 - Crea un formulario calcule el precio total de un hotel segun la habitacion y el numero de noches elegidas.
+Agrega un formulario donde el usuario pueda elegir el tipo de habitacion: 
+Suite: 100 euros, habitacion doble: 70 euros. Habitacion individual: 50 euros. 
+Este campo es obligatorio. Otro campo para introducir el numero de noches que debe ser mayor a 0.
+Agrega un boton que muestre el precio total. Si el usuario se queda por mas de 5 noches, se le aplica un descuento a la estancia del 20%.
+ */
+
+function CuantasNoches() {
+    let habitacion = document.getElementById("ejer8habitacion").value;
+    let numeroNoches = parseInt(document.getElementById("ejer8cantidadNoches").value);
+    let precioPorNoche = 0;
+    let precioFinal = 0;
+    let mensaje = "";
+
+    if (habitacion === "suite") {
+        precioPorNoche = 100;
+    }
+    else if (habitacion === "doble") {
+        precioPorNoche = 70;
+    }
+    else if (habitacion === "individual") {
+        precioPorNoche = 50;
+    }
+
+    if (habitacion && numeroNoches > 0) {
+        precioFinal = precioPorNoche * numeroNoches;
+
+        if (numeroNoches > 5) {
+            precioFinal *= 0.8; // Aplicando el 20% de descuento
+        }
+
+        mensaje = "El precio total es de: " + precioFinal + " € ";
+    }
+    else {
+        mensaje = "Por favor selecciona tipo de habitación y noches";
+    }
+
+    imprimir(mensaje, "ejer8resultadonoches");
+}

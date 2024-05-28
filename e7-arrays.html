@@ -23,8 +23,26 @@
         <button type="button" class="btn btn-success" onclick="mostrarLista()">Mostrar Lista de la compra</button>
         <p id="e1listaresultado"></p>
         <h3>Ejemplo 2: Mostrar la longitud del array, el primer elemento y el ultimo y su longitud</h3>
-        <button type="button" class="btn btn-success" onclick="mostrarInfoLista()">Mostrar informacion de la lista</button>
+        <button type="button" class="btn btn-success" onclick="mostrarInfoLista()">Mostrar informacion de la
+            lista</button>
         <p id="e2listainfo"></p>
+        <h3>Ejemplo 3: Cambiar el valor de un elemento de la lista (editar la lista)</h3>
+        <form id="e3formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e3posicion"
+                    placeholder="Introduce la posicion del elemento que quieres modificar" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debetener un valor mayor a 1</p>
+            </div>
+            <div class="mb-3">
+                <input type="texto" id="e3nuevovalor" placeholder="Introduce el nuevo valor para tu lista de la compra"
+                    required class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="modificarLista()">Modificar Lista</button>
+        </form>
     </div>
 
     <script src="js/e7-arrays.js"></script>
