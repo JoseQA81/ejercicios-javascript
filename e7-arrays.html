@@ -22,10 +22,12 @@
         <p>Mostrar una lista de la compra</p>
         <button type="button" class="btn btn-success" onclick="mostrarLista()">Mostrar Lista de la compra</button>
         <p id="e1listaresultado"></p>
+
         <h3>Ejemplo 2: Mostrar la longitud del array, el primer elemento y el ultimo y su longitud</h3>
         <button type="button" class="btn btn-success" onclick="mostrarInfoLista()">Mostrar informacion de la
             lista</button>
         <p id="e2listainfo"></p>
+
         <h3>Ejemplo 3: Cambiar el valor de un elemento de la lista (editar la lista)</h3>
         <form id="e3formulario" class="was-validated">
             <div class="mb-3">
@@ -43,6 +45,56 @@
             </div>
             <button type="button" class="btn btn-success" onclick="modificarLista()">Modificar Lista</button>
         </form>
+
+        <h3>Ejemplo 4: Agregar elementos al final de la lista</h3>
+        <form id="e4formularioelementolista" class="was-validated">
+            <div class="mb-3">
+                <input type="texto" id="e4elementonuevolista"
+                    placeholder="Introduce el articulo que quieras agregar a tu lista de la compra" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="agregar()">Agregar</button>
+        </form>
+
+        <h3>Ejemplo 5: Eliminar elementos del final de la lista</h3>
+        <button type="button" class="btn btn-success" onclick="eliminarUltimoElemento()">Eliminar Ultimo
+            Elemento</button>
+        <p id="e5elementoEliminado"></p>
+
+        <h3>Ejemplo 6: Eliminar un elemento concreto de la lista</h3>
+        <form id="e6formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e6posicion"
+                    placeholder="Introduce la posicion del elemento que quieres eliminar" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debe tener un valor mayor a 1</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="eliminarPosicionElegida()">Eliminar elemento en la
+                posicion elegida</button>
+        </form>
+        <p id="e6elementoBorrado"></p>
+
+        <h3>Ejemplo 7: Ordenar lista por orden alfabetico ASSCI descendente (reverse)</h3>
+        <button type="button" class="btn btn-success" onclick="ordenarLista()">Ordenar lista</button>
+        <p id="e5elementoEliminado"></p>
+
+        <h3>Ejemplo 8: Obtener la posicion de un elemento de la lista, y -1 si no se encuentra</h3>
+        <form id="e8formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e8elementoabuscar"
+                    placeholder="Introduce el texto del elemento que quieres buscar" required class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="verPosicionElemento()">Ver la posicion del
+                elemento</button>
+        </form>
+        <p id="e8resultado"></p>
+    
     </div>
 
     <script src="js/e7-arrays.js"></script>
