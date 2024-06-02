@@ -421,17 +421,21 @@
                     <option value="standard">Standard - 70 €</option>
                     <option value="basic">Basic - 50 €</option>
                 </select>
-                <div class="invalid-feedback">Este campo es obligatorio.</div>
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Por favor, selecciona un coche.</div>
 
             </div>
             <div class="mb-3">
                 <input type="number" id="ejer9numerodias" class="form-control" required min="1"
-                    placeholder="¿Cuántas noches?">
-                <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+                    placeholder="¿Cuántos días?">
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Debes seleccional al menos 1 día.</div>
             </div>
             <div class="mb-3">
                 <input type="number" id="ejer9nacimiento" class="form-control" required placeholder="Año de nacimiento">
                 <div class="invalid-feedback">La cantidad es obligatoria y debe ser mayor a 0.</div>
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Año de nacimiento es obligatorio.</div>
             </div>
             <div class="mb-3">
                 <select id="ejer9seguro" class="form-control" required>
@@ -439,11 +443,37 @@
                     <option value="todoriesgo">Todo riesgo: 20 € por día</option>
                     <option value="basico">Básico: 5 € por día</option>
                 </select>
+                <div class="valid-feedback">Correcto</div>
                 <div class="invalid-feedback">Este campo es obligatorio.</div>
             </div>
             <button type="button" class="btn btn-success" onclick="precioAlquilerCoche()">Ver Precio</button>
         </form>
         <p id="ejer9resultadocoches"></p>
+
+        Ejercicio 10 - Crea un programa para mostrar el resultado final.</h3>
+        <h3>1. Agrega un nuevo campo para que el usuario introduzca un numero del 1 al 10. Este campo es obligatorio.
+            2. Agrega un boton adivinar.
+            - El usuario tendra 3 intentos.
+            - Si el numero introducido es igual al ganador (el ganador sera el numero 3), mostrara un mensaje diciendo
+            ha ganado.
+            - Si el numero introducido no es igual al ganador, mostrará un mensaje diciendo "ha perdido, vuelva a
+            intentarlo",
+            y restará uno al número de intentos.
+            - Si el número de intentos es igual a 0, mostrará un mensaje diciendo, "lo siento no puede jugar más, le
+            quedan 0 intentos".</h3>
+
+        <form id="ejer9coche" class="was-validated">
+            <div class="mb-3">
+                <label for="adivina">Adivina adivinanza</label>
+                <input type="number" id="ejer10numero" class="form-control" required min="1" max="10"
+                    placeholder="Escribe un número">
+                <div class="valid-feedback">Correcto</div>
+                <div class="invalid-feedback">Debes seleccionar un número del 1 al 10.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="adivinar()">Ver Precio</button>
+
+        </form>
+        <p id="ejer10resultado"></p>
 
     </div>
 

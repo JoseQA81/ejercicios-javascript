@@ -213,18 +213,126 @@ function CuantasNoches() {
         precioPorNoche = 50;
     }
 
-    if (habitacion && numeroNoches > 0) {
-        precioFinal = precioPorNoche * numeroNoches;
+    precioFinal = numeroNoches * precioPorNoche;
 
-        if (numeroNoches > 5) {
-            precioFinal *= 0.8; // Aplicando el 20% de descuento
-        }
+    if (numeroNoches > 5) {
+        let descuento = (precioFinal * 20) / 100;
+        precioFinal = precioFinal - descuento; // Aplicando el 20% de descuento
+    }
 
-        mensaje = "El precio total es de: " + precioFinal + " € ";
-    }
-    else {
-        mensaje = "Por favor selecciona tipo de habitación y noches";
-    }
+    mensaje = "El precio total es de: " + precioFinal + " € ";
+
 
     imprimir(mensaje, "ejer8resultadonoches");
+}
+
+/*EJERCICIO 9 - Crea un formulario calcule el precio total del alquiler de un coche.
+Agrega un formulario donde el usuario pueda elegir el tipo de coche: Deluxe: 100 euros, Standard: 70 euros. Basic: 50 euros. 
+Este campo es obligatorio. El usuario tambien debe poder elegir el numero de dias, este campo es obligatorio y debe ser mayor a 0. 
+El usuario debe introducir tambien su año de nacimiento, este campo es obligatorio. 
+Y debe elegir el seguro: todo riesgo 20 euros por dia. Basico 5 euros por día.
+Agrega un botón que muestre el precio total. Teniendo en cuenta las siguientes reglas:
+El usuario debe ser mayor de 25 años, sino mostrara un mensaje indicando que no puede alquilar el coche.
+Si el coche se alquila por mas de 7 dias, se aplica un descuento del 10% al alquiler.
+Si el usuario ha elegido el seguro basico, debe mostrar ademas del precio final, un mensaje indicando que debe dejar un deposito de 500 euros.
+*/
+function obtenerCochePrecio() {
+    let coche = document.getElementById("ejer9tipocoche").value;
+    let cochePrecio = 0;
+
+    if (coche === "deluxe") {
+        cochePrecio = 100;
+    } else if (coche === "Standard") {
+        cochePrecio = 70;
+    } else if (coche === "basic") {
+        cochePrecio = 50;
+    }
+    else {
+        cochePrecio = 0;
+    }
+    return cochePrecio;
+}
+
+function obtenerSeguroPrecio() {
+    let seguro = document.getElementById("ejer9seguro").value;
+    let seguroPrecio = 0;
+
+    if (seguro === "todoriesgo") {
+        seguroPrecio = 20;
+    }
+
+    else {
+        seguroPrecio = 5;
+    }
+    return seguroPrecio;
+}
+
+function precioAlquilerCoche() {
+    let numeroDias = parseInt(document.getElementById("ejer9numerodias").value);
+    let fechaNacimiento = parseInt(document.getElementById("ejer9nacimiento").value);
+    let fechActual = 2024;
+
+    let edad = fechActual - fechaNacimiento;
+    let cochePrecio = 0;
+    let seguroPrecio = 0;
+    let totalPrecio = 0;
+    let mensaje = "";
+
+    if (edad < 25) {
+        mensaje = "No es mayor de 25, no puede alquilar coche";
+    }
+    else {
+        cochePrecio = obtenerCochePrecio();
+        seguroPrecio = obtenerSeguroPrecio();
+        totalPrecio = (numeroDias * cochePrecio) + (numeroDias * seguroPrecio);
+
+        if (numeroDias > 7) {
+            let descuento = totalPrecio * 10 / 100; // Descuento si se alquila más de 7 días
+            totalPrecio = totalPrecio - descuento;
+        }
+
+        let seguroSeleccionado = document.getElementById("ejer9seguro").value;
+        if (seguroSeleccionado === "basico") {
+            let depositoSeguro = 500;
+            mensaje = "El precio total es de: " + totalPrecio + " como ha elegido el seguro básico, debe de dejar un depósito de: " + depositoSeguro;
+        }
+        else {
+            mensaje = "El precio total es de: " + totalPrecio + " y no es necesario ningún depósito";
+        }
+    }
+    imprimir(mensaje, "ejer9resultadocoches");
+}
+
+/*EJERCICIO 10 - Crea un programa para mostrar el resultado final.
+1. Agrega un nuevo campo para que el usuario introduzca un numero del 1 al 10. Este campo es obligatorio.
+2. Agrega un boton adivinar.
+- El usuario tendrá 3 intentos.
+- Si el numero introducido es igual al ganador (el ganador será el numero 3), mostrará un mensaje diciendo "ha ganado".
+- Si el numero introducido no es igual al ganador, mostrará un mensaje diciendo "ha perdido, vuelva a intentarlo", 
+y restará uno al número de intentos.
+- Si el número de intentos es igual a 0, mostrará un mensaje diciendo, "lo siento no puede jugar más, le quedan 0 intentos".
+*/
+let intentos = 3;
+
+function adivinar() {
+    let numeroElegido = parseInt(document.getElementById("ejer10numero").value);
+    let numeroGanador = 3;
+    let mensaje = "";
+
+    if (numeroElegido === numeroGanador) {
+        mensaje = "Has ganado!";
+        intentos = 3;
+    }
+    else if (numeroGanador !== 3) {
+        mensaje = "Has perdido, vuelve a intentarlo";
+    }
+    else if (numeroGanador === 0) {
+        mensaje = "Lo siento no puedes jugar más, te quedan 0 intentos, más suerte la próxima vez";
+    }
+
+    if (intentos > 0) {
+        mensaje = "Intento realizado, te quedan: " + (intentos - 1) + " intentos.";
+        intentos--; // --: Es el operador de decremento, que reduce el valor de la variable a su izquierda en 1.
+    }
+    imprimir(mensaje, "ejer10resultado");
 }

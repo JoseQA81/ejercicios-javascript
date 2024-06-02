@@ -94,7 +94,46 @@
                 elemento</button>
         </form>
         <p id="e8resultado"></p>
-    
+
+    </div>
+
+    <div id="ejerciciosArrays" class="container mt-5">
+        <h3>Ejercicio 1: Mostrar lista de Alumnos</h3>
+        <p>Lista de Alumnos</p>
+        <button type="button" class="btn btn-success" onclick="mostrarListado()">Mostrar Lista de Alumnos</button>
+        <p id="ejer1listadoalumnos"></p>
+
+        <h3>Ejercicio 2: Muestra el nombre del alumno de la posición que elijas.</h3>
+        <form id="ej2formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ejer2posicion" placeholder="Introduce la posición" min="0" required
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="alumnoElegido()">Posición</button>
+        </form>
+        <div id="ejer2resultado"></div>
+
+        <h3>Ejercicio 3: Agrega un boton mostrar alumnos ordenados, que muestre los alumnos ordenados por nombre.</h3>
+
+        <button type="button" class="btn btn-success" onclick="mostrarAlumnosOrdenados()">Posición</button>
+        <div id="ejer3resultado"></div>
+
+        <h3>Ejercicio 4: Agrega una nueva opción para agregar un nuevo alumno.</h3>
+
+        <form id="ejer4formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ejer4elementoagregar"
+                    placeholder="Introduce el nombre que quieres agregar" required  maxlength="30" class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="nuevoAlumno()">Agregar alumno</button>
+        </form>
+        <p id="ejer4resultado4"></p>
+
+
     </div>
 
     <script src="js/e7-arrays.js"></script>
