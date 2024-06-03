@@ -120,18 +120,49 @@
         <button type="button" class="btn btn-success" onclick="mostrarAlumnosOrdenados()">Posición</button>
         <div id="ejer3resultado"></div>
 
-        <h3>Ejercicio 4: Agrega una nueva opción para agregar un nuevo alumno.</h3>
+        <h3>Ejercicio 4: Agrega una nueva opcion para agregar un nuevo alumno.</h3>
 
         <form id="ejer4formulario" class="was-validated">
             <div class="mb-3">
-                <input type="text" id="ejer4elementoagregar"
-                    placeholder="Introduce el nombre que quieres agregar" required  maxlength="30" class="form-control">
+                <input type="text" id="ejer4elementoagregar" placeholder="Introduce el nombre que quieres agregar"
+                    required maxlength="30" class="form-control">
                 <p class="valid-feedback">Correcto</p>
                 <p class="invalid-feedback">El campo es obligatorio</p>
             </div>
             <button type="button" class="btn btn-success" onclick="nuevoAlumno()">Agregar alumno</button>
         </form>
         <p id="ejer4resultado4"></p>
+
+        <h3>Ejercicio 5: Agrega una opcion para eliminar un alumno de una posicion elegida.</h3>
+
+        <form id="ejer5formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e5posicionelegida"
+                    placeholder="Introduce la posicion del elemento que quieres eliminar" required min="1" max="500"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debe tener un valor entre 1 y 500</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="elegirEliminarPosicion()">Eliminar</button>
+        </form>
+        <p id="ejer5resultadoeliminar"></p>
+
+        Ejercicio 6: Agrega una opción para buscar un alumno. Para ello:
+        Agrega un campo para introducir el nombre del alumno a buscar.
+        Agrega un botón buscar, que al pulsarlo muestre un mensaje con todos los alumnos que contengan el nombre
+        introducido,
+        sin distinguir entre mayúsculas y minúsculas.</h3>
+
+        <form id="ejer6formulario" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ejer6buscar" placeholder="Introduce el nombre que deseas buscar"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debes introducir un nombre</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="buscarAlumnos()">Buscar Alumno</button>
+        </form>
+        <p id="ejer6resultadobuscar"></p>
 
 
     </div>
