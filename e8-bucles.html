@@ -67,6 +67,93 @@
 
     </div>
 
+    <div id="ejerciciosbucles" class="container mt-5">
+        <h3>Ejercicio 1: Suma de todos los números desde el 1 hasta el introducido por el usuario</h3>
+
+        <form id="e1blucles" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="e1sumanumeros" placeholder="Introduce un número a sumar" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">El campo es obligatorio y debe ser mayor a '0'</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarSuma()">Agregar Número</button>
+        </form>
+        <p id="e1buclesresultado"></p>
+
+        <h3>Ejercicio 2: Mostrar una palabra el numero de veces indicado por el usuario</h3>
+
+        <form id="ejer2bucles" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ejer2palabra" required minlength="1" placeholder="Introduce una palabra"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debes introducir una palabra</p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ejer2numeroveces"
+                    placeholder="Introduce un número para ver las veces que debe aparecer la palabra" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Introduce un número. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPalabra()">Mostrar palabras</button>
+        </form>
+        <p id="e2buclesresultado"></p>
+
+        <h3>Ejercicio 3: Mostrar la palabra MARGARITA o AMAPOLA el numero de veces introducido por el usuario segun si
+            la palabra empieza por vocal o no</h3>
+
+        <form id="ejer3bucles" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ejer3palabra" required minlength="1" placeholder="Introduce una palabra"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debes introducir una palabra</p>
+            </div>
+            <div class="mb-3">
+                <input type="number" id="ejer3numeroveces"
+                    placeholder="Introduce el número de veces que quieras repetir ANAPOLA o MARGARITA " required min="1"
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Introduce un número. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarPalabras()">Mostrar palabras</button>
+        </form>
+        <p id="e3buclesresultado"></p>
+
+        <h3>Ejercicio 4: Muestra todos los numeros pares desde el 0 hasta el indicado por el usuario.</h3>
+
+        <form id="ejer4bucles" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ejer4numeroS" placeholder="Introduce un número" required min="1"
+                    class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Introduce un número. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="mostrarNumerosPares()">Mostrar palabras</button>
+        </form>
+        <p id="e4buclesresultado"></p>
+
+        <h3>Ejercicio 5: Muestra todos los nombres de una lista en mayúsculas.</h3>
+
+        <form id="ejer5bucles" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="ejer5nombres" required minlength="3" placeholder="Introduce un nombre"
+                    class="form-control">
+                <p class="valid-feedback">Correcto</p>
+                <p class="invalid-feedback">Debes introducir un nombre</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="agregarNombre()">Mostrar palabras</button>
+            <button type="button" class="btn btn-success" onclick="listaMayusculas()">Mostrar palabras</button>
+            <button type="button" class="btn btn-success" onclick="mostrarNombresA()">Mostrar palabras</button>
+        </form>
+        <p id="e5resultadonombre"></p>
+        <p id="e5resultadomayusculas"></p>
+        <p id="e5resultadonombresA"></p>
+
+    </div>
+
     <script src="js/e8-bucles.js"></script>
     <script src="js/e8-ejercicios-bucles.js"></script>
 </body>

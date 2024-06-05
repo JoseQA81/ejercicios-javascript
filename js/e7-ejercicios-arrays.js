@@ -1,4 +1,4 @@
-let listAlumnos = ["José Andrés", "María Jesús", "Álex", "Reyes", "Alicia", "Rebeca", "Rocío", "Camila", "Samanta", "Sandra"];
+let listAlumnos = ["Jose", "MJ", "Alex", "Reyes", "Alicia", "Rebeca", "Rocío", "Camila", "Samanta", "Sandra"];
 
 /*EJERCICIO 1: Agrega un boton mostrar alumnos, que al pulsarlo muestre una lista con los nombres de 10 alumnos.*/
 function mostrarListado() {
