@@ -87,7 +87,7 @@ function sumarMayoresA5() {
 }
 
 //EJEMPLO 5 WHILE
-/*While se usa cuando queremos repetir el mismo código pero no sabemos cuantas veces. 
+/**While se usa cuando queremos repetir el mismo código pero no sabemos cuantas veces. 
 Queremos repetirlo hasta que se cumpla una condición concreta.*/
 function buscarNumero() {
     let numeroAbuscar = 5;
@@ -99,7 +99,7 @@ function buscarNumero() {
 
         i++;
     }
-    /*Si ha salido porque ha terminado la lista dice que no lo ha encontrado, y si sigue siendo la i menor a la longitud es 
+    /**Si ha salido porque ha terminado la lista dice que no lo ha encontrado, y si sigue siendo la i menor a la longitud es 
     que se ha salido porque ha encontrado el elemento que buscaba.*/
     if (i< listaNumeros.length) {
         mensaje = "El número " + " se encuentra en la posición: " + (i + 1);

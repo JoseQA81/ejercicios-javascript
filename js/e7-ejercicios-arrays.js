@@ -37,34 +37,36 @@ Agrega un boton eliminar, que al pulsarlo, elimine el alumno de la posición int
 Agrega una comprobación para mostrar un mensaje de error si la posición introducida es mayor a la longitud total de la lista*/
 function elegirEliminarPosicion() {
     let posicion = parseInt(document.getElementById("e5posicionelegida").value);
-    let listado = posicion - 1;
+    let posicionLista = posicion - 1; //como la lista empieza en 0, le restamos 1. Que quiere decir que el 1, corresponde a la posicion 0
     let mensaje = "";
-    mostrarListado();
+
 
     if (posicion < 1 || posicion > listAlumnos.length) {
         mensaje = "Error, la posición introducida es mayor a la longitud total de la lista";
     }
     else {
-        listAlumnos.splice(posicion, 1);
+        listAlumnos.splice(posicionLista, 1);
         mensaje = "Alumno eliminado, la lista actualizada es: " + listAlumnos.join(", "); //El método join se usa para convertir todos los elementos de un array en una sola cadena de texto.
+        mostrarListado();
     }
     imprimir(mensaje, "ejer5resultadoeliminar");
-}//No me elimina en la posición que debiera y no me muestra el listado con "mostrarListado();"
+}
 
-/*EJERCICIO 6: Agrega una opción para buscar un alumno. Para ello:
+/**EJERCICIO 6: Agrega una opción para buscar un alumno. Para ello:
 Agrega un campo para introducir el nombre del alumno a buscar.
-Agrega un botón buscar, que al pulsarlo muestre un mensaje con todos los alumnos que contengan el nombre introducido, 
-sin distinguir entre mayúsculas y minúsculas.*/
+Agrega un botón buscar, que al pulsarlo muestre un mensaje con todos los alumnos que contengan el nombre introducido.*/
 
 function buscarAlumnos() {
-    let nombreAlumno = document.getElementById("ejer6buscar").value.toLowerCase();
+    let nombreAlumno = document.getElementById("ejer6buscar").value;
+    let indice = listAlumnos.indexOf(nombreAlumno);
     let mensaje = "";
-    if (listAlumnos.includes(nombreAlumno)) {
-        mensaje = "El alumno " + nombreAlumno + " está en la lista";
+
+    if (indice !== -1) {
+        mensaje = "El alumno " + nombreAlumno + " está en la lista con los nombres: " + listAlumnos[indice] + " en la posición " + (indice + 1);
     }
     else {
-        mensaje = "El alumno " + nombreAlumno + " NO está en la lista";
+        mensaje = "El alumno NO está en la lista";
     }
     imprimir(mensaje, "ejer6resultadobuscar");
 
-}//Siempre me imprime que el nombre no está en la lista. I give up!
+}
