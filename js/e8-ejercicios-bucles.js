@@ -85,46 +85,34 @@ function mostrarNumerosPares() {
 4. Agrega un nuevo botón que al pulsarlo muestre los nombres de la lista que empiecen por la letra A.
  */
 let listaDeNombres = [];
+let mensaje = "";
+let mensajeFinal = "";
 
 function agregarNombre() {
     let nombres = document.getElementById("ejer5nombres").value;
     listaDeNombres.push(nombres);
-    let mensaje = "";
-
-    mostrarLista();
-    mensaje = "El nombre es: " + nombres;
-
-    imprimir(mensaje, "e5resultadonombre");
-}
-
-function mostrarLista() {
-    let mensaje = "La lista de nombres es: ";
-
-    for (let i = 0; i < listaDeNombres.length; i++) {
-        mensaje += listaDeNombres[i] + ", ";
-    }
-    imprimir(mensaje.slice(0, -2), "e5resultadomayusculas");
+    imprimir(listaDeNombres, "e5resultadonombre");
+    
 }
 
 function listaMayusculas() {
-    let mensaje = "La lista en mayúsculas es: ";
 
     for (let i = 0; i < listaDeNombres.length; i++) {
-        mensaje += listaDeNombres[i].toUpperCase() + ", ";
+        let nombres = listaDeNombres[i];
+        mensaje += nombres.toUpperCase() + ", ";
     }
-    imprimir(mensaje.slice(0, -2), "e5resultadomayusculas");
+    imprimir(mensaje, "e5resultadomayusculas");
 }
 
 function mostrarNombresA() {
-    let mensaje = "Los nombres que empiezan por A son: ";
 
     for (let i = 0; i < listaDeNombres.length; i++) {
-        let primeraLetra = listaDeNombres[i].charAt(0).toLowerCase();
+        let nombres = listaDeNombres[i];
 
-        if (primeraLetra === 'a') {
-            mensaje += listaDeNombres[i] + ", ";
+        if (nombres[0].toUpperCase() === 'A') {
+            mensajeFinal += nombres + ", ";
         }
     }
-    imprimir(mensaje.slice(0, -2), "e5resultadonombresA");
+    imprimir(mensajeFinal, "e5resultadonombresA");
 
 }
