@@ -7,7 +7,7 @@ function mostrarSuma() {
     let mensaje = "";
 
     for (let i = 0; i <= numero; i++) { //let i = 0: Inicializa la variable i a 0. 
-        //i <= numero: El bucle continúa mientras i sea menor o igual al número introducido por el usuario.
+        //i <= numero: El bucle continúa mientras i sea 'menor o igual' al número introducido por el usuario.
         suma = suma + i;                //i++: Incrementa i en 1 después de cada iteración.
         //suma = suma + i: En cada iteración del bucle, el valor actual de i se suma a la variable suma.                
         //mensaje += i + " la suma es: " + suma + "\n";  En este mensaje se ve la suma desglosada 

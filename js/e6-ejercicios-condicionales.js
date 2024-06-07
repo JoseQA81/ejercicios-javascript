@@ -319,20 +319,20 @@ function adivinar() {
     let numeroGanador = 3;
     let mensaje = "";
 
-    if (numeroElegido === numeroGanador) {
-        mensaje = "Has ganado!";
-        intentos = 3;
+    if (intentos > 0) {
+
+        if (numeroElegido === numeroGanador) {
+            mensaje = "¡Has ganado!";
+        }
+        else {
+            intentos--; // --: Es el operador de decremento, que reduce el valor de la variable a su izquierda en 1.
+            mensaje = "Ha perdido, vuelve a intentarlo, te quedan: " + intentos + " intentos.";
+        }
+
     }
-    else if (numeroGanador !== 3) {
-        mensaje = "Has perdido, vuelve a intentarlo";
-    }
-    else if (numeroGanador === 0) {
-        mensaje = "Lo siento no puedes jugar más, te quedan 0 intentos, más suerte la próxima vez";
+    else {
+        mensaje = "Has perdido, no te quedan más intentos";
     }
 
-    if (intentos > 0) {
-        mensaje = "Intento realizado, te quedan: " + (intentos - 1) + " intentos.";
-        intentos--; // --: Es el operador de decremento, que reduce el valor de la variable a su izquierda en 1.
-    }
     imprimir(mensaje, "ejer10resultado");
 }
