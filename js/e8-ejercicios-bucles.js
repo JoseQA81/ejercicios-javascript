@@ -1,6 +1,3 @@
-let listaNombres2 = ["Jose", "MJ", "Alex", "Reyes", "Alicia", "Rebeca", "Rocío", "Camila", "Samanta", "Sandra"];
-
-
 /**1. Muestra la suma de todos los numeros desde el 0 hasta el introducido por el usuario.
 1. Agrega un campo para introducir un numero mayor que 0.
 2. Agrega un boton que al pulsarlo muestre la suma de todos los numeros desde el 1 hasta el numero indicado. */
@@ -67,15 +64,14 @@ Nota: Un numero es par si el resto de la division entre 2 es 0. Para saber el re
  */
 function mostrarNumerosPares() {
     let numero = parseInt(document.getElementById("ejer4numeroS").value);
-    let numeroMax = 50;
     let mensaje = "";
 
-    for (let i = 1; i <= numeroMax; i++) {
+    for (let i = 1; i <= numero; i++) {
 
         if (i % 2 === 0) {
             mensaje += i + " PAR ";
         }
-        
+
     }
     imprimir(mensaje, "e4buclesresultado");
 
@@ -88,3 +84,47 @@ function mostrarNumerosPares() {
 3. Agrega un botón que al pulsarlo muestre la lista completa en mayúsculas.
 4. Agrega un nuevo botón que al pulsarlo muestre los nombres de la lista que empiecen por la letra A.
  */
+let listaDeNombres = [];
+
+function agregarNombre() {
+    let nombres = document.getElementById("ejer5nombres").value;
+    listaDeNombres.push(nombres);
+    let mensaje = "";
+
+    mostrarLista();
+    mensaje = "El nombre es: " + nombres;
+
+    imprimir(mensaje, "e5resultadonombre");
+}
+
+function mostrarLista() {
+    let mensaje = "La lista de nombres es: ";
+
+    for (let i = 0; i < listaDeNombres.length; i++) {
+        mensaje += listaDeNombres[i] + ", ";
+    }
+    imprimir(mensaje.slice(0, -2), "e5resultadomayusculas");
+}
+
+function listaMayusculas() {
+    let mensaje = "La lista en mayúsculas es: ";
+
+    for (let i = 0; i < listaDeNombres.length; i++) {
+        mensaje += listaDeNombres[i].toUpperCase() + ", ";
+    }
+    imprimir(mensaje.slice(0, -2), "e5resultadomayusculas");
+}
+
+function mostrarNombresA() {
+    let mensaje = "Los nombres que empiezan por A son: ";
+
+    for (let i = 0; i < listaDeNombres.length; i++) {
+        let primeraLetra = listaDeNombres[i].charAt(0).toLowerCase();
+
+        if (primeraLetra === 'a') {
+            mensaje += listaDeNombres[i] + ", ";
+        }
+    }
+    imprimir(mensaje.slice(0, -2), "e5resultadonombresA");
+
+}
