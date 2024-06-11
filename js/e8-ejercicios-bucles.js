@@ -92,7 +92,7 @@ function agregarNombre() {
     let nombres = document.getElementById("ejer5nombres").value;
     listaDeNombres.push(nombres);
     imprimir(listaDeNombres, "e5resultadonombre");
-    
+
 }
 
 function listaMayusculas() {
@@ -116,3 +116,87 @@ function mostrarNombresA() {
     imprimir(mensajeFinal, "e5resultadonombresA");
 
 }
+
+/**6. Crea un programa para sumar todos los números de una lista.
+1. Agrega un nuevo campo para agregar notas a una lista. Este campo debe ser numérico, y acepta números del 1 al 10 con decimales.
+2. Agrega un botón agregar, que al pulsarlo agrege la nota introducida a la lista y la muestre.
+3. Agrega un botón que al pulsarlo muestre la suma total de todos los números de la lista, o 0 si está la lista vacía. 
+4. Agrega un botón que muestre la nota media de la lista.
+5. Agrega un botón para indicar si el usuario ha aprobado o no. El usuario está aprobado si su nota media es igual o mayor a 5.
+ */
+let notas = [];
+
+function agregarNotas() {
+    let mensaje = "";
+    let numero = parseFloat(document.getElementById("ejer6numeroslista").value);
+
+    if (!isNaN(numero) && numero >= 1 && numero <= 10) {
+        notas.push(numero);
+
+        mensaje = "Nota agregada: " + numero;
+        document.getElementById("ejer6numeroslista").value = "";
+    }
+    else {
+        mensaje = "Introduce un número válido entre 1 y 10";
+    }
+    imprimir(mensaje, "ejer6agregarnota");
+}
+
+function agregarYmostrarNotas() {
+    let mensaje = "Notas: " + notas.join(", ");
+    imprimir(mensaje, "ejer6mostraragregarnota");
+}
+
+function sumaTotalNumeros() {
+    let numero = parseFloat(document.getElementById("ejer6numeroslista").value);
+    let sumaTotal = 0;
+
+    for (let i = 0; i < notas.length; i++) {
+        sumaTotal += notas[i]; /**notas[i] accede al elemento en la posición i del array notas. 
+                                    En cada iteración del bucle, 'i' se incrementa para acceder al siguiente elemento en el array.*/
+    }
+    mensaje += "La suma de los números es: " + sumaTotal;
+    imprimir(mensaje, "e6sumatotalresultado");
+}
+
+function notaMediaLista() {
+    let mensaje = "";
+    let sumaTotal = 0;
+    let cantidadNotas = notas.length;
+
+    for (let i = 0; i < cantidadNotas; i++) {
+        sumaTotal += notas[i];
+    }
+    let media = sumaTotal / cantidadNotas;
+    media = media.toFixed(1); // Con toFixed limitamos el número de decimales y entre paréntesis indicamos cuantos decimales queremos.
+
+    mensaje = "La nota media es: " + media;
+    imprimir(mensaje, "e6notamediaresultado");
+}
+
+function mostrarSiAprobado() {
+    let mensaje = "";
+    let sumaTotal = 0;
+    let cantidadNotas = notas.length;
+
+    for (let i = 0; i < cantidadNotas; i++) {
+        sumaTotal += notas[i];
+    }
+    let media = sumaTotal / cantidadNotas;
+    media = media.toFixed(1);
+
+    let resultado = media >= 5 ? "¡Aprobado!" : "No aprobado, estudia más: "; /**es una forma abreviada de escribir una expresión condicional */
+    mensaje = "El estudiante está: " + resultado + " con una nota media de: " + media;
+
+    imprimir(mensaje, "e6resultadoaprobado");
+}
+/**Si media es mayor o igual a 5, entonces la condición media >= 5 se evalúa como verdadera, y se asigna el valor "Aprobado" a la variable 
+ * resultado. De lo contrario, si media es menor que 5, la condición se evalúa como falsa y se asigna el valor 
+ * "No aprobado" a la variable resultado. */
+
+/**let resultado;
+if (media >= 5) {
+    resultado = "Aprobado";
+} else {
+    resultado = "No aprobado";
+} */ // Operación hecha con condicionales.

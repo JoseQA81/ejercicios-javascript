@@ -145,12 +145,35 @@
                 <p class="invalid-feedback">Debes introducir un nombre</p>
             </div>
             <button type="button" class="btn btn-success" onclick="agregarNombre()">Agregar nombre</button>
-            <button type="button" class="btn btn-success" onclick="listaMayusculas()">Mostrar lista en mayúsculas</button>
-            <button type="button" class="btn btn-success" onclick="mostrarNombresA()">Mostrar nombres que empiezan por 'A'</button>
+            <button type="button" class="btn btn-success" onclick="listaMayusculas()">Mostrar lista en
+                mayúsculas</button>
+            <button type="button" class="btn btn-success" onclick="mostrarNombresA()">Mostrar nombres que empiezan por
+                'A'</button>
         </form>
         <p id="e5resultadonombre"></p>
         <p id="e5resultadomayusculas"></p>
         <p id="e5resultadonombresA"></p>
+
+        <h3>Ejercicio 6: Crea un programa para sumar todos los números de una lista.</h3>
+
+        <form id="ejer6bucles" class="was-validated">
+            <div class="mb-3">
+                <input type="number" id="ejer6numeroslista" placeholder="Introduce un número" required min="1" max="10"
+                    step="0.1" class="form-control">
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">Introduce un número. </p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="agregarNotas()">Agregar Notas</button>
+            <button type="button" class="btn btn-success" onclick="agregarYmostrarNotas()">Mostrar Notas</button>
+            <button type="button" class="btn btn-success" onclick="sumaTotalNumeros()">Sumar Números</button>
+            <button type="button" class="btn btn-success" onclick="notaMediaLista()">Nota Media</button>
+            <button type="button" class="btn btn-success" onclick="mostrarSiAprobado()">¿Aprobado?</button>
+        </form>
+        <p id="e6buclesresultado"></p>
+        <p id="ejer6mostraragregarnota"></p>
+        <p id="e6sumatotalresultado"></p>
+        <p id="e6notamediaresultado"></p>
+        <p id="e6resultadoaprobado"></p>
 
     </div>
 
