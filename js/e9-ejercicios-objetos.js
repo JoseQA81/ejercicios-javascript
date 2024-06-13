@@ -4,7 +4,7 @@ let viaje = {
     destino: "Irlanda",
     precio: 150,
     duracion: 15,
-    ciudades: ["Dublín", "Galway", "Cork"]
+    ciudades: ["Dublín", "Galway", "Cork"],
     viajeros: []
 };
 
