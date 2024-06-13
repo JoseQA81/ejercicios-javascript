@@ -79,8 +79,86 @@
         </form>
         <p id="e5objetos"></p>
 
+    </div>
 
-        <script src="js/e9-objetos.js"></script>
+    <div id="ejemplosobjetos" class="container mt-5">
+
+        <h3>Ejercicio 1: Crea un nuevo objeto, llamado viaje</h3>
+
+        <button type="button" class="btn btn-success" onclick="mostrarInfoViaje()">Mostrar viaje</button>
+        <p id="ejer1objetosviaje"></p>
+
+        <h3>Ejercicio 2: Cambiar propiedades del viaje</h3>
+
+        <form id="ejer2objetosviaje" class="was-validated">
+            <div class="mb-3">
+                <select id="e2objetosviajepropiedades" class="form-select" style="max-width: 250px;">
+                    <option value="destino">Destino</option>
+                    <option value="precio">Precio</option>
+                    <option value="duracion">Duración</option>
+                    <option value="ciudades">Ciudades</option>
+                </select>
+
+            </div>
+            <div class="mb-3">
+                <input type="text" id="e2obnuevovalor" placeholder="Introduce nuevo valor" required>
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El valor es obligatorio</p>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="propiedadViajeCambiar()">Ver nueva
+                información</button>
+        </form>
+
+        <h3>Ejercicio 3: Agregar descripción del viaje</h3>
+
+        <form id="ejer3objetosdescipcion" class="was-validated">
+            <div class="mb-3">
+                <input type="text" id="e3nuevadescrip" placeholder="Nueva descripción" required>
+                <p class="valid-feedback">correcto</p>
+                <p class="invalid-feedback">El valor es obligatorio</p>
+            </div>
+            <button type="button" class="btn btn-success" onclick="agregarDescripcion()">Agregar nueva
+                descripción</button>
+        </form>
+        <p id="ejer3resultadodescrip"></p>
+
+        <h3>Ejercicio 4: Agrega un formulario para agregar viajeros del viaje</h3>
+
+        <form id="agregarViajeroForm" class="was-validated">
+            <div class="mb-3">
+                <label for="nombreViajero" class="form-label">Nombre del Viajero:</label>
+                <input type="text" id="e4nombreViajero" class="form-control" required>
+                <div class="invalid-feedback">Por favor, ingrese el nombre del viajero.</div>
+            </div>
+            <div class="mb-3">
+                <label for="tipoViajero" class="form-label">Tipo:</label>
+                <select id="e4tipoViajero" class="form-select" required>
+                    <option value="">Seleccione el tipo</option>
+                    <option value="adulto">Adulto</option>
+                    <option value="nino">Niño</option>
+                </select>
+                <div class="invalid-feedback">Por favor, seleccione el tipo de viajero.</div>
+            </div>
+            <div class="mb-3">
+                <label for="descuentoViajero" class="form-label">Descuento:</label>
+                <select id="e4descuentoViajero" class="form-select" required>
+                    <option value="">Seleccione el descuento</option>
+                    <option value="ninguno">Sin descuento</option>
+                    <option value="estudiante">Estudiante</option>
+                    <option value="jubilado">Jubilado</option>
+                </select>
+                <div class="invalid-feedback">Por favor, seleccione un descuento.</div>
+            </div>
+            <button type="button" class="btn btn-success" onclick="agregarViajero()">Agregar Viajero</button>
+        </form>
+        <p id="ejer4resultadoviajeros"></p>
+
+    </div>
+
+
+    <script src="js/e9-objetos.js"></script>
+    <script src="js/e9-ejercicios-objetos.js"></script>
 </body>
 
 </html>
