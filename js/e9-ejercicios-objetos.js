@@ -5,7 +5,8 @@ let viaje = {
     precio: 150,
     duracion: 15,
     ciudades: ["Dublín", "Galway", "Cork"]
-}
+    viajeros: []
+};
 
 function mostrarInfoViaje() {
     let mensaje = "Nos vamos de viaje a: " + viaje.destino + ". Con un precio de: " + viaje.precio + "€" + ". Duración: " + viaje.duracion + " días" + " y visitaremos: " + viaje.ciudades + ". Descripción: " + viaje.descripcion;
@@ -46,3 +47,16 @@ function agregarDescripcion() {
  * en el que introduzca el nombre del viajero, seleccione el tipo (adulto o niño), y seleccione los descuentos: 
  * estudiante, jubilado o ninguno. Cuando el usuario pulse el boton agregar, se mostrará la lista con toda la información 
  * de los viajeros agregados.  */
+function agregarViajero() {
+    let viajero = document.getElementById("e4nombreViajero").value;
+    let tipoViajero = document.getElementById("e4tipoViajero").value;
+    let descuento = document.getElementById("e4descuentoViajero").value;
+
+    let nuevoViajero = {
+        nombre: nombre,
+        tipo: tipo,
+        descuento: descuento
+    };
+    viaje.viajeros.push(nuevoViajero);
+    mostrarViajeros();
+}
