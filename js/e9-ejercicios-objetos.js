@@ -2,11 +2,12 @@
  * a visitar. Agrega un boton a tu pagina, llamado mostrar info de viaje, que muestre toda la informacion del viaje. */
 let viaje = {
     destino: "Irlanda",
-    precio: 150,
+    precio: 1000,
     duracion: 15,
-    ciudades: ["Dublín", "Galway", "Cork"],
-    viajeros: []
+    ciudades: ["Dublín", "Galway", "Cork"]
 };
+
+let viajeros = [];
 
 function mostrarInfoViaje() {
     let mensaje = "Nos vamos de viaje a: " + viaje.destino + ". Con un precio de: " + viaje.precio + "€" + ". Duración: " + viaje.duracion + " días" + " y visitaremos: " + viaje.ciudades + ". Descripción: " + viaje.descripcion;
@@ -53,10 +54,72 @@ function agregarViajero() {
     let descuento = document.getElementById("e4descuentoViajero").value;
 
     let nuevoViajero = {
-        nombre: nombre,
-        tipo: tipo,
+        nombre: viajero,
+        tipo: tipoViajero,
         descuento: descuento
     };
-    viaje.viajeros.push(nuevoViajero);
-    mostrarViajeros();
+    viajeros.push(nuevoViajero);
+    imprimirViajeros();
+}
+
+function imprimirViajeros() {
+    let mensaje = "";
+
+    for (i = 0; i < viajeros.length; i++) {
+        let viajero = viajeros[i];
+
+        mensaje += "\n Viajero numero: " + i;
+        mensaje += "\n Nombre: " + viajero.nombre;
+        mensaje += "\n Tipo: " + viajero.tipo;
+        mensaje += "\n Descuento: " + viajero.descuento;
+        mensaje += "\n Precio Viaje: " + viajero.precioViaje + " € ";
+        mensaje += "\n\n";
+    }
+    imprimir(mensaje, "ejer4resultadoviajeros");
+}
+
+/**5. Agrega al formulario un boton para mostrar el precio que debe pagar cada viajero por el viaje. 
+ * El precio del viaje para los niños es un 25% más barato. Para estudiante se aplica un descuento del 5%, para jubilados un descuento del 10%. 
+ * El precio a pagar del viaje se debe agregar como una propiedad mas de cada viajero.
+ */
+function mostrarPrecio() {
+    let precioViaje = viaje.precio;
+
+    for (i = 0; i < viajeros.length; i++) {
+        let viajero = viajeros[i];
+        let precioFinal = 0;
+
+        if (viajero.tipo === "niño") {
+            precioFinal = precioViaje * 0.75; //(100-25)/100 = 0.75
+        }
+        else if (viajero.descuento === "estudiante") {
+            precioFinal = precioViaje * 0.95; //(100-5)/100 = 0.95
+        }
+        else if (viajero.descuento === "jubilado") {
+            precioFinal = precioViaje * 0.90; //(100-10)/100 = 0.90
+        }
+        else {
+            precioFinal = precioViaje;
+        }
+
+        viajero["precioViaje"] = precioFinal;
+
+    }
+
+    imprimirViajeros();
+}
+
+/**Ejercicio 6: Agrega un boton al formulario para mostrar el precio total del viaje. 
+ * Este precio será la suma del precio pagado por cada viajero. */
+function precioTotal() {
+    mostrarPrecio();
+    let precioTotal = 0;
+
+    for (i = 0; i < viajeros.length; i++) {
+        let viajero = viajeros[i];
+
+        precioTotal += viajero.precioViaje;
+    }
+    let mensaje = "El precio total del viaje es: " + precioTotal + " € ";
+    imprimir(mensaje, "ejer6preciototal");
 }
